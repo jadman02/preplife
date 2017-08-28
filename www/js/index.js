@@ -82,7 +82,7 @@ view3 = myApp.addView('#view-3');
   } else {
       
 
-      
+      startApp();
 alert('no user');
   }
 });
@@ -122,6 +122,7 @@ alert('no user');
 
 function startApp(){
 
+       alert('startApp');
 
     
     firebaseinit = localStorage.getItem('tokenStore');
