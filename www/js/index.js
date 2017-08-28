@@ -81,6 +81,8 @@ view3 = myApp.addView('#view-3');
     
   } else {
       
+
+      
 alert('no user');
   }
 });
