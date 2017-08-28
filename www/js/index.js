@@ -74,7 +74,7 @@ view3 = myApp.addView('#view-3');
   
   if (user) {
       
-setTimeout(function(){ $( ".ploader" ).slideUp(); }, 2000);
+setTimeout(function(){ $( ".ploader" ).slideUp();$( ".toolbar" ).show(); }, 2000);
        
 
 
