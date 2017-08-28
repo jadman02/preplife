@@ -134,3 +134,15 @@ function startApp(){
 }
 
 
+
+var pickerDevice = myApp.picker({
+    input: '#picker-cat',
+    cols: [
+        {
+            textAlign: 'center',
+            values: ['Dishwashers','Ovens','Cooktops','Rangehoods','Microwaves','Refrigerators','Freezers','Washing machines','Dryers']
+        }
+    ]
+});
+
+
