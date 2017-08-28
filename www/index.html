@@ -44,251 +44,97 @@
 
 <body>
 
-   
-<div class="statusbar-overlay" style="background-color:#00bcd4"></div>
- 
+<div class="statusbar-overlay"></div>
+
 <div class="panel-overlay"></div>
- 
+
 <div class="panel panel-left panel-reveal">
-
-<div id="view-2" class="view tab">
- 
-<div class="navbar" style="background-color:#2196f3;color:white;">
-    <div class="navbar-inner">
-        <div class="left"></div>
-        <div class="center left-title">Calendar</div>
-        
-        <div class="right" ></div>
-            
-            
-
-    
-
-            
-    </div>
-</div>
-<div class="pages navbar-through">
-<div data-page="index-2" class="page">
-<div class="page-content" style="padding-top:20px;background-color:#f7f7f8;">
-
-
-
-
-
-
-<div class="timeline-upcoming timeline-date timeline">
-
-
-    
-</div>
-
-
+<div class="content-block">
+<p>Left panel content goes here</p>
 </div>
 </div>
-</div>
-<!--
-<div class="toolbar" style="background-color:#2196f3;">
-          <div class="toolbar-inner" style="padding:0px;">
 
-            
-            <a href="#" onclick="preferencesPopup();" style="color:white;width:50%;float:width;text-align:center;">Preferences</a>
-            <a href="#" class="close-panel" onclick="logout()" style="background-color:#ff3b30;color:white;width:50%;height:44px;float:width;text-align:center;"><div style="margin-top:10px;">Logout</div></a>
-          </div>
-        </div>
--->
-</div>
-
-
-
-
-
-</div>
- 
- 
- 
- 
-<div class="panel panel-right panel-reveal" style="background-color:#efeff4;">
-
-<div id="view-2" class="view tab">
- 
-<div class="navbar" style="background-color:#2196f3;color:white;">
-    <div class="navbar-inner">
-        <div class="left"></div>
-        <div class="center right-title">Matches</div>
-        
-        <div class="right" ></div>
-
-    </div>
-</div>
-<div class="pages navbar-through">
-<div data-page="index-2" class="page">
-<div class="page-content pull-to-refresh-content pull-to-refresh-content-2" style="background-color:#f7f7f8;margin-bottom:-44px;" onscroll="scrollNotifications();">
-
-<div class="pull-to-refresh-layer">
-      <div class="preloader"></div>
-      <div class="pull-to-refresh-arrow"></div>
-    </div>
-   
-   
-<div class="list-block virtual-list media-list virtual-notifications"  style="margin-top:0px;margin-bottom:0px;">
-  <!-- keep it empty -->
-</div>
-
-<div id="notiflistdiv"></div>
-
+<div class="panel panel-right panel-cover">
+<div class="content-block">
+<p>Right panel content goes here</p>
 </div>
 </div>
-</div>
-<!--
-<div class="toolbar" style="background-color:#2196f3;">
-          <div class="toolbar-inner" style="padding:0px;">
-
-            
-            <a href="#" onclick="preferencesPopup();" style="color:white;width:50%;float:width;text-align:center;">Preferences</a>
-            <a href="#" class="close-panel" onclick="logout()" style="background-color:#ff3b30;color:white;width:50%;height:44px;float:width;text-align:center;"><div style="margin-top:10px;">Logout</div></a>
-          </div>
-        </div>
--->
-</div>
 
 
-
-
-
-
-
-
-
-</div>
- 
-
- 
 <div class="views tabs toolbar-through">
- 
 
- 
 <div id="view-1" class="view view-main tab active">
- 
 
+<div class="pages">
 
- 
- <div class="itim ploader" style="z-index:9999999;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-color:#00bcd4;">
-         
-         <div style="width:200px;height:210px;position:absolute;top:50%;left:50%;margin-left:-100px;margin-top:-130px;text-align:center;color:white;">
-  
-<i class="twa twa-4x twa-wave"></i>
-<h1 style="font-size:50px;font-weight:100;color:white;clear:both;">Pay Slap</h1>
-		 <p>The best price finds you.</p>
+<div data-page="index-1" class="page">
 
-
-                 
- 
-
-             
-
-             <span class="preloader preloader-white login-loader" style="margin-top:20px;clear:both;"></span>
-
-
-
-
-
-
-           
-
-     
- </div>
-
-      
-      </div>
-
- <div class="navbar navbar-home" style="background-color:#00bcd4;;">
- <div class="navbar-inner" style="padding:0px;">
-     
-	 <div class="center">
-	 <a href="#" class="link" style="color:white">Pay Slap</a>
-	 </div>
-      
-    </div>
-</div>
-
-<div class="pages navbar-through" style="background-color:white;">
- 
-<div data-page="index-1" class="page" style="background-color:white;">
-
-
-	
-
-<div class="page-content" style="background-color:white;height:100%;">
-
-Find prices
-	
-<audio controls id="buzzer" style="display:none;">
-  <source src="media/quack.mp3" type="audio/mpeg">
-</audio>
-
-<!--<a href="#" class="button" onclick="addFakey()">Add Fake User</a>
-<a href="#" class="button" onclick="markMe()">Mark Me</a>
-
-<a href="#" class="button" onclick="checkArray()">Check Array</a>
--->
-
-
-
-
-
-
+<div class="page-content">
+<div class="content-block-title">Welcome</div>
+<div class="content-block">
+<p>This is an example of tab bar application layout. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
+<p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
+<p>And of course, your favorite panels are still here: <a href="#" class="open-panel">left</a> and <a href="#" data-panel="right" class="open-panel">right</a></p>
+<p>Icons and their labels in tab bar below are just for example and don't related to their content.</p>
 </div>
 </div>
 </div>
 </div>
- 
+</div>
 
+<div id="view-2" class="view tab">
+
+<div class="navbar">
+<div class="navbar-inner">
+<div class="center sliding">Second View</div>
+</div>
+</div>
+<div class="pages navbar-through">
+<div data-page="index-2" class="page">
+<div class="page-content">
+<div class="content-block">
+<p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+</div>
+<div class="list-block">
+<ul>
+<li><a href="about.html" class="item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">About Us</div>
+</div>
+</div></a></li>
+<li><a href="services.html" class="item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">Services</div>
+</div>
+</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="view-3" class="view tab">
 <div class="pages">
 <div data-page="index-3" class="page">
 <div class="page-content">
-<div class="content-block-title">3</div>
+<div class="content-block-title">Another plain static view</div>
 <div class="content-block">
-View 3
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor. </p>
+<p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor. </p>
+</div>
+
 </div>
 </div>
 </div>
 </div>
+
+
+<div class="toolbar tabbar tabbar-labels">
+<div class="toolbar-inner"><a href="#view-1" class="tab-link active"> <i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Information</span></a><a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Inbox</span></a><a href="#view-3" class="tab-link"> <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Upload</span></a><a href="#view-4" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a></div>
 </div>
-
-
-
-<div class="toolbar toolbar-home tabbar" style="z-index:5000;background-color:#f8f8f7">
-   <div class="toolbar-inner" style="background-color:transparent;">
- 
-       
-
- <a href="#view1" class="tab-link>
-            <i class="pe-7s-search pe-lg" style="margin-top:5px;color:black;"></i>
-            <span class="tabbar-label">Find</span>
-        </a>
-
-      
-	   
-
-       
-
-<a href="#view3" class="tab-link">
-            <i class="pe-7s-chat pe-lg" style="margin-top:5px;color:black;"></i>
-            <span class="badge notifspan" style="display:none;z-index:9999;position:absolute;margin-top:-7px;left:50%;top:15px;margin-left:5px;background-color:#ffd000;height:12px;width:12px;"></span>
-            <span class="tabbar-label">Buy</span>
-        </a>
-
-
-  
-
-
- </div>
-</div>
-
-
-
-
 </div>
 
 <script type="text/javascript" src="js/firebase-app.js"></script>
