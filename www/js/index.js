@@ -74,9 +74,9 @@ view3 = myApp.addView('#view-3');
   
   if (user) {
       
-
+setTimeout(function(){ $( ".ploader" ).slideUp(); }, 2000);
        
-       alert('yes user');// User is signed in.
+
 
     
   } else {
