@@ -42,6 +42,8 @@
     <!-- Plugins -->
     <!-- Core plugins -->
 
+             <plugin name="cordova-plugin-stripe"         source="npm" />
+
      <plugin name="cordova-plugin-geolocation"         source="npm" />
     <plugin name="cordova-plugin-inappbrowser"        source="npm" />
     <plugin name="cordova-plugin-whitelist"           source="npm" />
