@@ -69,7 +69,8 @@ var app = {
 };
 
 function onSuccesscc(tokenId) {
-    alert(tokenId);
+
+    alert(JSON.stringify(tokenId));
 }
 
 function onErrorcc(errorMessage) {
