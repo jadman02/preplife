@@ -69,13 +69,16 @@ var app = {
 };
 
 function onSuccesscc(tokenId) {
-    alert('Got card token!', tokenId);
+    alert(tokenId);
 }
 
 function onErrorcc(errorMessage) {
     alert('Error getting card token', errorMessage);
 }
 
+       // this.stripe.createCardToken(card)
+    //.then((res: any) => console.log(res));
+        
 cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 
         // Add views
