@@ -51,8 +51,32 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-               
-    
+               cordova.plugins.stripe.setPublishableKey('pk_test_enX3otYbJ4O0lN1xkkx9iOSZ');
+
+    var card = {
+  number: '4242424242424242', // 16-digit credit card number
+  expMonth: 12, // expiry month
+  expYear: 2020, // expiry year
+  cvc: '220', // CVC / CCV
+  name: 'John Smith', // card holder name (optional)
+  address_line1: '123 Some Street', // address line 1 (optional)
+  address_line2: 'Suite #220', // address line 2 (optional)
+  address_city: 'Toronto', // city (optional)
+  address_state: 'Ontario', // state/province (optional)
+  address_country: 'Canada', // country (optional)
+  postal_code: 'L5L5L5', // Postal Code / Zip Code (optional)
+  currency: 'CAD' // Three-letter ISO currency code (optional)
+};
+
+function onSuccesscc(tokenId) {
+    alert('Got card token!', tokenId);
+}
+
+function onErrorcc(errorMessage) {
+    alert('Error getting card token', errorMessage);
+}
+
+cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 
         // Add views
 view1 = myApp.addView('#view-1');
