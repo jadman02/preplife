@@ -143,7 +143,16 @@ alert('no user');
         
         
         
-        
+function checkBox(){
+if ($('#checkbox').prop('checked')) {
+    $('.yespick').show();
+    $('.yespick').hide();
+}
+    else{
+    $('.nopick').show();
+        $('.nopick').hide();
+    }
+}        
     
 
     
