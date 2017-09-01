@@ -151,8 +151,7 @@ alert('no user');
 function startApp(){
 
     var mySwiper = myApp.swiper('.swiper-categories', {
-    slidesPerView: 3,
-        autoplay:2000
+    slidesPerView: 3
   });
     
 
