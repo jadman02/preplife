@@ -168,7 +168,7 @@ function startApp(){
 
 var pickerDevice = myApp.picker({
     input: '#picker-cat',
-    onOpen:function (p){$( ".blockpick" ).show();},
+    onChange:function (p, values, displayValues){$( ".blockpick" ).show();},
     cols: [
         {
             textAlign: 'center',
