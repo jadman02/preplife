@@ -168,10 +168,11 @@ function startApp(){
 
 var pickerDevice = myApp.picker({
     input: '#picker-cat',
+    onOpen:function (p){$( ".blockpick" ).show();},
     cols: [
         {
             textAlign: 'center',
-            values: ['Dishwashers','Ovens','Cooktops','Rangehoods','Microwaves','Refrigerators','Freezers','Washing machines','Dryers']
+            values: ['Dishwasher','Oven','Cooktop','Rangehood','Microwave','Refrigerator','Freezer','Washing machine','Dryer']
         }
     ]
 });
