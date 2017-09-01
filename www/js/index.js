@@ -146,11 +146,11 @@ alert('no user');
 function checkBox(){
 if ($('#checkbox').prop('checked')) {
     $('.yespick').show();
-    $('.yespick').hide();
+    $('.nopick').hide();
 }
     else{
     $('.nopick').show();
-        $('.nopick').hide();
+        $('.yespick').hide();
     }
 }        
     
@@ -177,7 +177,7 @@ function startApp(){
 
 var pickerDevice = myApp.picker({
     input: '#picker-cat',
-    onClose:function (p){$( ".blockpick" ).show();},
+    onClose:function (p){$( ".blockpick" ).show();$('.yespick').show();},
     cols: [
         {
             textAlign: 'center',
