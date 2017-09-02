@@ -5,6 +5,7 @@ var myApp = new Framework7();
 var $$ = Dom7;
 var view1, view2, view3;
 var user_offers;
+var business_notifs; 
 // Export selectors engine
 
 
@@ -142,7 +143,7 @@ alert('no user');
 
 function getPreferences(){
 
-    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', user_offers);}
+    if (user_offers){firebase.database().ref('user_offers/' + f_uid).off('value', user_offers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
         
@@ -176,7 +177,7 @@ $.each(objs, function(i, obj) {
     
     });
 
-    if (business_notifs){firebase.database().ref('users/' + f_uid).off('value', business_notifs);}
+    if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
     business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot) {
 
         
@@ -210,7 +211,7 @@ $.each(objs, function(i, obj) {
         
         else{
             $('.offersul').empty();
-            $('.offersul').append('No offers yet');
+            $('.offersul').append('<div class="content-block-title">No offers received yet</div>');
         
         }
     
