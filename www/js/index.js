@@ -145,10 +145,30 @@ function getPreferences(){
     if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
-    alert(JSON.stringify(snapshot.val()));
-        
-    });
+        if (snapshot.val()){
+$('.accordianul').empty();
+var objs = snapshot.val();
 
+$.each(objs, function(i, obj) {
+ 
+     $('.accordianul').append(
+         '<li class="accordion-item">'+
+          '  <a href="" class="item-link item-content">'+
+           '     <div class="item-inner">'+
+            '        <div class="item-title">'+obj.category+'</div>'+
+             '   </div>'+
+            '</a> '+
+            '<div class="accordion-item-content key_'+obj.id+'">No offers received yet</div>'+
+        '</li>'
+        );
+    });
+ 
+    
+    });
+}
+        
+   
+   
 }
 
 function clearSearch(){
