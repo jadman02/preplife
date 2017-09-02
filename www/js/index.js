@@ -161,7 +161,7 @@ $.each(objs, function(i, obj) {
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
           '              <div class="item-title">'+obj.category+' </div>'+
-           '             <div class="item-after">0 offers</div>'+
+           '             <div class="item-after">0 <i class="pe-7s-portfolio pe-lg"></i></div>'+
             '        </div>'+
              '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
               '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
@@ -176,26 +176,7 @@ $.each(objs, function(i, obj) {
     
     });
 
-     if (business_offers){firebase.database().ref('users/' + f_uid).off('value', business_offers);}
-    business_offers = firebase.database().ref('business_offers/' +f_uid).on('value', function(snapshot) {
-
-        
-        if (snapshot.val()){
-$('.businessaccordian').empty();
-var objs = snapshot.val();
-
-$.each(objs, function(i, obj) {
-
-    $('.key_' + obj.id).append(
-    '<div><a href="">One offer to buy is here to click on and open popup. should also have a total deal in te accordian number</a></div>'
-    );
-    
-    
-    });
-        }
-    
-    });
-    
+     
 }
 
 function clearSearch(){
