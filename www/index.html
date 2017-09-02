@@ -201,14 +201,14 @@
 	
 	<div class="content-block-title yespick" style="display:none;margin-top:20px;">What do you want to pay?</div>
 
-		<div class="list-block pay-block yespick" style="margin-top:0px;display:none;">
+		<div class="list-block pay-block yespick" style="margin-top:0px;display:none;margin-bottom:0px;">
   <ul>
 	  <li>
       <div class="item-content">
         <div class="item-inner">
           <div class="item-title label">Your offer</div>
           <div class="item-input">
-              <input type="number" style="-wap-input-format: 'N'" min="0.01" step="0.01">
+              <input type="number" pattern="\d*" min="0.01" step="0.01">
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@
         <div class="item-inner">
           <div class="item-title label">Quantity</div>
           <div class="item-input">
-              <input type="number" style="-wap-input-format: 'N'" min="1" value="1" step="1">
+              <input type="number" pattern="\d*" min="1" value="1" step="1">
           </div>
         </div>
       </div>
