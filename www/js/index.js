@@ -141,12 +141,13 @@ alert('no user');
 };
 
 function clearSearch(){
-$('.yespick').hide();
+alert('clear');
+    $('.yespick').hide();
 $( ".s_category" ).val('');
-$( ".s_brand" ).val('');
-$( ".s_model" ).val('');
+//$( ".s_brand" ).val('');
+//$( ".s_model" ).val('');
 $( ".s_offer" ).val('');
-$( ".s_quantity" ).val('');
+$( ".s_quantity" ).val('1');
 
     
 } 
