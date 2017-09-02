@@ -142,14 +142,13 @@ alert('no user');
 
 function getPreferences(){
 
-    if (user_offers){firebase.database().ref('user_offers/' + f_uid).off('value', user_offers);}
+    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
-        alert(JSON.stringify(snapshot.val());
+    alert(JSON.stringify(snapshot.val()));
         
-        
-   });
-   
+    });
+
 }
 
 function clearSearch(){
@@ -187,8 +186,7 @@ var targetData = {
     brand:'s_brand',
     model:'s_model',
     offer:s_offer,
-    quanity:s_quantity,
-    id: newPostKey
+    quanity:s_quantity
    };
 
   
@@ -249,5 +247,4 @@ var pickerDevice = myApp.picker({
         }
     ]
 });
-
 
