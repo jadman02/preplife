@@ -153,7 +153,7 @@ var objs = snapshot.val();
 $.each(objs, function(i, obj) {
 
     $('.accordianul').append(
-    ' <li>
+    ' <li>'+
                 '       <a href="#" class="item-link item-content">'+
      '           <div class="item-media">'+
       '              <img src="path/to/img.jpg">'+
