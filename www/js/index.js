@@ -142,7 +142,7 @@ alert('no user');
 
 function getPreferences(){
 
-    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
+    if (user_offers){firebase.database().ref('user_offers/' + f_uid).off('value', user_offers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
         if (snapshot.val(){
