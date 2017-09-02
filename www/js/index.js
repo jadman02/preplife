@@ -181,9 +181,13 @@ var targetData = {
       updates['user_offers/' + f_uid + '/' + newPostKey] = targetData;
     
 
-return firebase.database().ref().update(updates);
-
+return firebase.database().ref().update(updates).then(function() {
+      
     clearSearch();
+      
+  });
+
+    
     
 }        
         
