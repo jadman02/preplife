@@ -153,18 +153,20 @@ var objs = snapshot.val();
 $.each(objs, function(i, obj) {
 
     $('.accordianul').append(
-    '<li>'+
-     '       <a href="" class="item-link item-content">'+
-      '          <div class="item-inner">'+
-                            '<div class="item-title-row">'+
-       '             <div class="item-title">'+obj.category+'</div>'+
-                                '<div class="item-after badge">0</div>'+
-                ' <div class="item-subtitle">Your offer: $ '+obj.offer+'</div>'+
-                 '   <div class="item-text">No businesses have accepted</div>'+
-
-        '</div>'+
-        '        </div>'+
-         '   </a>'+ 
+    ' <li>
+                '       <a href="#" class="item-link item-content">'+
+     '           <div class="item-media">'+
+      '              <img src="path/to/img.jpg">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">'+obj.category+' </div>'+
+           '             <div class="item-after">0 offers</div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
+              '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
+               ' </div>'+
+           ' </a>'+
         '</li>'
     );
     
