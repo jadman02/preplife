@@ -142,7 +142,7 @@ alert('no user');
 
 function getPreferences(){
 
-    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
+    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', user_offers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
         
@@ -159,7 +159,7 @@ $.each(objs, function(i, obj) {
        '             <div class="item-title">'+obj.category+'</div>'+
         '        </div>'+
          '   </a>'+ 
-          '  <div class="accordion-item-content key_'+obj.id+'" >Item 1 content ...</div>'+
+          '  <div class="accordion-item-content businessaccordian key_'+obj.id+'" >Item 1 content ...</div>'+
         '</li>'
     );
     
@@ -169,6 +169,26 @@ $.each(objs, function(i, obj) {
     
     });
 
+     if (business_offers){firebase.database().ref('users/' + f_uid).off('value', business_offers);}
+    business_offers = firebase.database().ref('business_offers/' +f_uid).on('value', function(snapshot) {
+
+        
+        if (snapshot.val()){
+$('.businessaccordian').empty();
+var objs = snapshot.val();
+
+$.each(objs, function(i, obj) {
+
+    $('.key_' + obj.id).append(
+    '<div><a href="">One offer to buy is here to click on and open popup. should also have a total deal in te accordian number</a></div>'
+    );
+    
+    
+    });
+        }
+    
+    });
+    
 }
 
 function clearSearch(){
