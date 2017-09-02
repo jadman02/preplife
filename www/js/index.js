@@ -1,5 +1,6 @@
 
 var f_token;
+var f_uid;
 var myApp = new Framework7();
 var $$ = Dom7;
 var view1, view2, view3;
@@ -101,7 +102,7 @@ view3 = myApp.addView('#view-3');
 
   
   if (user) {
-      
+      f_uid = firebase.auth().currentUser.uid;
 setTimeout(function(){ $( ".ploader" ).slideUp();$( ".toolbar" ).show(); }, 2000);
        
 
@@ -141,7 +142,35 @@ alert('no user');
 
 
         
-        
+function submitOffer(){
+
+    
+  var newPostKey = firebase.database().ref().push().key;
+var t_unix = Math.round(+new Date()/1000);
+
+var s_category = $( ".s_category" ).val();
+var s_brand = $( ".s_brand" ).val();
+var s_model = $( ".s_model" ).val();
+var s_offer = $( ".s_offer" ).val();
+var s_quantity = $( ".s_quantity" ).val();
+
+var targetData = {
+   posted:f_uid,
+    timestamp: t_unix,
+    category:s_category,
+    brand:s_brand,
+    model:s_model,
+    quanity:s_quantity
+   };
+
+  
+    var updates = {};
+  updates['requests/' + newPostKey] = targetData;
+    
+
+
+
+}        
         
 function checkBox(){
 if ($('#checkbox').prop('checked')) {
