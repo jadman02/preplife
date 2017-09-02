@@ -167,6 +167,7 @@ var targetData = {
   
     var updates = {};
   updates['requests/' + newPostKey] = targetData;
+      updates['user_offers/' + f_uid + '/' + newPostKey] = targetData;
     
 
 
