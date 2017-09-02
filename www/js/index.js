@@ -141,7 +141,10 @@ alert('no user');
 };
 
 function clearSearch(){
-alert('clear');
+
+    
+        $('.blockpick').hide();
+
     $('.yespick').hide();
 $( ".s_category" ).val('');
 //$( ".s_brand" ).val('');
