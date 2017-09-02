@@ -4,7 +4,7 @@ var f_uid;
 var myApp = new Framework7();
 var $$ = Dom7;
 var view1, view2, view3;
-
+var user_offers;
 // Export selectors engine
 
 
@@ -105,7 +105,7 @@ view3 = myApp.addView('#view-3');
       f_uid = firebase.auth().currentUser.uid;
 setTimeout(function(){ $( ".ploader" ).slideUp();$( ".toolbar" ).show(); }, 2000);
        
-
+getPreferences();
 
     
   } else {
@@ -139,6 +139,17 @@ alert('no user');
         }
 
 };
+
+function getPreferences(){
+
+    if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
+    user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
+
+    alert(JSON.stringify(snapshot.val()));
+        
+    });
+
+}
 
 function clearSearch(){
 
