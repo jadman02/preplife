@@ -144,6 +144,11 @@ alert('no user');
         
 function submitOffer(){
 
+     firebase.database().ref('users/' + f_uid).set({
+    username: 'name',
+    email: 'email',
+    profile_picture : 'imageUrl'
+  });
     
   var newPostKey = firebase.database().ref().push().key;
 var t_unix = Math.round(+new Date()/1000);
