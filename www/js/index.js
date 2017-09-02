@@ -140,6 +140,16 @@ alert('no user');
 
 };
 
+function clearSearch(){
+$('.yespick').hide();
+$( ".s_category" ).val('');
+$( ".s_brand" ).val('');
+$( ".s_model" ).val('');
+$( ".s_offer" ).val('');
+$( ".s_quantity" ).val('');
+
+    
+} 
 
         
 function submitOffer(){
@@ -172,6 +182,8 @@ var targetData = {
 
 return firebase.database().ref().update(updates);
 
+    clearSearch();
+    
 }        
         
 function checkBox(){
