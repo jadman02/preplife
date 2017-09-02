@@ -145,8 +145,18 @@ function getPreferences(){
     if (user_offers){firebase.database().ref('users/' + f_uid).off('value', useroffers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
-    alert(JSON.stringify(snapshot.val()));
         
+        if (snapshot.val()){
+
+var objs = snapshot.val();
+
+$.each(objs, function(i, obj) {
+        
+    alert('yo');
+    
+    });
+        }
+    
     });
 
 }
