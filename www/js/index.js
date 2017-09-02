@@ -158,8 +158,9 @@ var targetData = {
    posted:f_uid,
     timestamp: t_unix,
     category:s_category,
-    brand:s_brand,
-    model:s_model,
+    brand:'s_brand',
+    model:'s_model',
+    offer:s_offer,
     quanity:s_quantity
    };
 
