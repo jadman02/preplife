@@ -147,13 +147,13 @@ function submitOffer(){
     
   var newPostKey = firebase.database().ref().push().key;
 var t_unix = Math.round(+new Date()/1000);
-
+alert('here1');
 var s_category = $( ".s_category" ).val();
 var s_brand = $( ".s_brand" ).val();
 var s_model = $( ".s_model" ).val();
 var s_offer = $( ".s_offer" ).val();
 var s_quantity = $( ".s_quantity" ).val();
-
+alert('here2');
 var targetData = {
    posted:f_uid,
     timestamp: t_unix,
@@ -164,11 +164,11 @@ var targetData = {
     quanity:s_quantity
    };
 
-  
+  alert('here3');
     var updates = {};
   updates['requests/' + newPostKey] = targetData;
       updates['user_offers/' + f_uid + '/' + newPostKey] = targetData;
-    
+    alert('here4');
 
 
 
