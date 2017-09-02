@@ -147,12 +147,22 @@ function getPreferences(){
 
         
         if (snapshot.val()){
-
+$('.accordianul').empty();
 var objs = snapshot.val();
 
 $.each(objs, function(i, obj) {
-        
-    alert('yo');
+
+    $('.accordianul').append(
+    '<li class="accordion-item">'+
+     '       <a href="" class="item-link item-content">'+
+      '          <div class="item-inner">'+
+       '             <div class="item-title">'+obj.category+'</div>'+
+        '        </div>'+
+         '   </a>'+ 
+          '  <div class="accordion-item-content key_'+obj.id+'" >Item 1 content ...</div>'+
+        '</li>'
+    );
+    
     
     });
         }
