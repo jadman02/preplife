@@ -196,7 +196,8 @@ var targetData = {
     brand:'s_brand',
     model:'s_model',
     offer:s_offer,
-    quanity:s_quantity
+    quanity:s_quantity,
+    id:newPostKey
    };
 
   
