@@ -216,7 +216,9 @@ $.each(objs, function(i, obj) {
         }
     
     });
-     
+ 
+    businessOffer();
+    
 }
 
 function clearSearch(){
