@@ -154,7 +154,7 @@ var objs = snapshot.val();
 $.each(objs, function(i, obj) {
 
     $('.accordianul').append(
-    ' <li>'+
+    ' <li onclick="payModal()">'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
       '              <img src="path/to/img.jpg">'+
@@ -188,7 +188,7 @@ var objs = snapshot.val();
 $.each(objs, function(i, obj) {
 
     $('.offersul').append(
-    ' <li>'+
+    ' <li onclick="payModal()">'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
       '              <img src="path/to/img.jpg">'+
