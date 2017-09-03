@@ -53,22 +53,8 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-               cordova.plugins.stripe.setPublishableKey('pk_test_enX3otYbJ4O0lN1xkkx9iOSZ');
+               cordova.plugins.stripe.setPublishableKey('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
 
-    var card = {
-  number: '4242424242424242', // 16-digit credit card number
-  expMonth: 12, // expiry month
-  expYear: 2020, // expiry year
-  cvc: '220', // CVC / CCV
-  name: 'John Smith', // card holder name (optional)
-  address_line1: '123 Some Street', // address line 1 (optional)
-  address_line2: 'Suite #220', // address line 2 (optional)
-  address_city: 'Toronto', // city (optional)
-  address_state: 'Ontario', // state/province (optional)
-  address_country: 'Canada', // country (optional)
-  postal_code: 'L5L5L5', // Postal Code / Zip Code (optional)
-  currency: 'CAD' // Three-letter ISO currency code (optional)
-};
 
 function onSuccesscc(tokenId) {
 
@@ -81,8 +67,7 @@ function onErrorcc(errorMessage) {
 
        // this.stripe.createCardToken(card)
     //.then((res: any) => console.log(res));
-        
-cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
+
 
         // Add views
 view1 = myApp.addView('#view-1');
@@ -239,15 +224,36 @@ function payModal(){
 '<div class="page-content" style="background-color:white;">'+
 
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'
-    'Counter Offers'
-    'Terms - delivery required'
-    'Buy - > modal are you sure / about to process'
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
+        '<a href="#" onclick="chargeCard()" class="button">Charge card</a>'+
         
-        
-        '</div></div></div>    '+
-                  '</div>'
+        '</div></div></div>'+
+                  '</div>';
   myApp.popup(popupHTML);
+
+}
+
+function chargeCard(){
+
+         var card = {
+  number: '4242424242424242', // 16-digit credit card number
+  expMonth: 12, // expiry month
+  expYear: 2020, // expiry year
+  cvc: '220', // CVC / CCV
+  name: 'John Smith', // card holder name (optional)
+  address_line1: '123 Some Street', // address line 1 (optional)
+  address_line2: 'Suite #220', // address line 2 (optional)
+  address_city: 'Toronto', // city (optional)
+  address_state: 'Ontario', // state/province (optional)
+  address_country: 'Canada', // country (optional)
+  postal_code: 'L5L5L5', // Postal Code / Zip Code (optional)
+  currency: 'CAD' // Three-letter ISO currency code (optional)
+};
+       
+cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 
 }
 
