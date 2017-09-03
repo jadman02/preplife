@@ -221,6 +221,31 @@ $.each(objs, function(i, obj) {
     
 }
 
+
+function payModal(){
+
+    var popupHTML = '<div class="popup buypop">'+
+                    
+     '   <div class="navbar" style="background-color:#00bcd4;">'+
+    '<div class="navbar-inner">'+
+   '    <div class="left"></div>'+
+  '  <div class="center">Buy</div>'+
+        
+ '   </div>'+
+'</div>'+
+'<div class="pages navbar-through">'+
+'<div data-page="buypage" class="page">'+
+'<div class="page-content" style="background-color:white;">'+
+
+        '<br/><br/><br/><br/>Deal and buy'+
+        
+        
+        '</div></div></div>    '+
+                  '</div>'
+  myApp.popup(popupHTML);
+
+}
+
 function clearSearch(){
 
     
