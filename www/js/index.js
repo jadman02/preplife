@@ -234,7 +234,30 @@ $( ".s_quantity" ).val('1');
     
 } 
 
-        
+
+function businessOffer(){
+  var newPostKey = firebase.database().ref().push().key;
+var t_unix = Math.round(+new Date()/1000);
+
+var targetData = {
+   posted:f_uid,
+    timestamp: t_unix,
+    category:'s_category',
+    brand:'s_brand',
+    model:'s_model',
+    offer:'490.00',
+    accept_offer:'Y',
+    quanity:'2',
+    offerid:'666',
+    id:newPostKey
+   };
+
+  
+    var updates = {};
+
+      updates['business_notifs/' + f_uid + '/' + '666/'+newPostKey] = targetData;
+}
+
 function submitOffer(){
 
     
