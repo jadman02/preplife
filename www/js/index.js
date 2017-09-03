@@ -257,7 +257,8 @@ cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 }
 
 function onSuccesscc(tokenId) {
-
+alert(JSON.stringify(tokenId));
+    return false;
     $.post( "http://www.recountify.com/savecustomer.php", {stripeToken:tokenId} )
   .done(function( data ) {    
 
