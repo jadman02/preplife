@@ -228,7 +228,7 @@ function payModal(){
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
-   '    <div class="left"><a href="#" class="close-popup link" style="color:white;"><i class="pe-7s-portfolio"></i></a></div>'+
+   '    <div class="left"><a href="#" class="close-popup link" style="color:white;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
   '  <div class="center">Buy</div>'+
   '  <div class="right"></div>'+
         
@@ -238,7 +238,11 @@ function payModal(){
 '<div data-page="buypage" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
 
-        '<br/><br/><br/><br/>Deal and buy'+
+        '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'
+    'Counter Offers'
+    'Terms - delivery required'
+    'Buy - > modal are you sure / about to process'
         
         
         '</div></div></div>    '+
