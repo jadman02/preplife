@@ -261,7 +261,7 @@ function onSuccesscc(tokenId) {
     $.post( "http://www.recountify.com/savecustomer.php", {stripeToken:tokenId} )
   .done(function( data ) {    
 
-alert('saved customer');
+alert(data);
 });
     
    
