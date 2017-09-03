@@ -118,14 +118,7 @@ alert('no user');
 
 };
 
-function onSuccesscc(tokenId) {
 
-    alert(JSON.stringify(tokenId));
-}
-
-function onErrorcc(errorMessage) {
-    alert('Error getting card token', errorMessage);
-}
 
 
 function getPreferences(){
@@ -215,7 +208,7 @@ function payModal(){
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
-   '    <div class="left"><a href="#" class="close-popup link" style="color:white;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
+   '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
   '  <div class="center">Buy</div>'+
   '  <div class="right"></div>'+
         
@@ -230,13 +223,17 @@ function payModal(){
     'Counter Offers'+
     'Terms - delivery required'+
     'Buy - > modal are you sure / about to process'+
-        '<a href="#" onclick="chargeCard()" class="button">Charge card</a>'+
+        '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
+        '<a href="#" onclick="saveCustomer()" class="button">Save customer</a>'+
         
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
 
 }
+
+
+
 
 function chargeCard(){
 
@@ -257,6 +254,21 @@ function chargeCard(){
        
 cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 
+}
+
+function onSuccesscc(tokenId) {
+
+    $.post( "http://www.recountify.com/savecustomer.php", {stripeToken:tokenId} )
+  .done(function( data ) {    
+
+alert('saved customer');
+});
+    
+   
+}
+
+function onErrorcc(errorMessage) {
+    alert('Error getting card token', errorMessage);
 }
 
 function clearSearch(){
