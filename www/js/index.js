@@ -258,6 +258,11 @@ var targetData = {
     var updates = {};
 
       updates['business_notifs/' + f_uid + '/' + '666/'+newPostKey] = targetData;
+    return firebase.database().ref().update(updates).then(function() {
+      alert('business offer sent');
+    //clearSearch();
+      
+  });
 }
 
 function submitOffer(){
