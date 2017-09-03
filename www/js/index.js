@@ -228,12 +228,13 @@ function payModal(){
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
-   '    <div class="left"></div>'+
+   '    <div class="left"><a href="#" class="close-popup link" style="color:white;"><i class="pe-7s-portfolio"></i></a></div>'+
   '  <div class="center">Buy</div>'+
+  '  <div class="right"></div>'+
         
  '   </div>'+
 '</div>'+
-'<div class="pages navbar-through">'+
+'<div class="pages">'+
 '<div data-page="buypage" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
 
