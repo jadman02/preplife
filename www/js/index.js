@@ -53,8 +53,8 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-        //       cordova.plugins.stripe.setPublishableKey('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
-               cordova.plugins.stripe.setPublishableKey('pk_live_igOGntn7DYUc72yYBPvKvViq');
+               cordova.plugins.stripe.setPublishableKey('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
+             //LIVE  cordova.plugins.stripe.setPublishableKey('pk_live_igOGntn7DYUc72yYBPvKvViq');
 
 
 
