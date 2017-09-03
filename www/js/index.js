@@ -56,14 +56,6 @@ var app = {
                cordova.plugins.stripe.setPublishableKey('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
 
 
-function onSuccesscc(tokenId) {
-
-    alert(JSON.stringify(tokenId));
-}
-
-function onErrorcc(errorMessage) {
-    alert('Error getting card token', errorMessage);
-}
 
        // this.stripe.createCardToken(card)
     //.then((res: any) => console.log(res));
@@ -125,6 +117,16 @@ alert('no user');
         }
 
 };
+
+function onSuccesscc(tokenId) {
+
+    alert(JSON.stringify(tokenId));
+}
+
+function onErrorcc(errorMessage) {
+    alert('Error getting card token', errorMessage);
+}
+
 
 function getPreferences(){
 
