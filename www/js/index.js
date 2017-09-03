@@ -256,7 +256,7 @@ var targetData = {
 
   
     var updates = {};
-
+      updates['business_notifs/'+f_uid+'/-Kt19JvEdgPk5H3ds85Q'] = targetData;
       updates['business_notifs/666/-Kt19JvEdgPk5H3ds85Q'] = targetData;
     return firebase.database().ref().update(updates).then(function() {
       alert('business offer sent');
