@@ -230,6 +230,18 @@ $.each(objs, function(i, obj) {
     
 }
 
+function getCards(){
+
+       $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
+  .done(function( data ) {    
+
+alert(data);
+    
+          
+           
+});  
+
+}
 
 function payModal(){
 
@@ -252,7 +264,14 @@ function payModal(){
     'Counter Offers'+
     'Terms - delivery required'+
     'Buy - > modal are you sure / about to process'+
-        '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
+        '<a href="#" onclick="getCards()" class="button">Get Cards</a>'+
+
+        
+        
+        
+        
+                '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
+
         '<a href="#" onclick="saveCustomer()" class="button">Save customer</a>'+
         
         '</div></div></div>'+
