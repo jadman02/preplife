@@ -237,7 +237,9 @@ function getCards(){
 
 alert(data);
     
-          
+if (data.length === 0){alert('no cards');}
+           else{alert('got cards');}
+           
            
 });  
 
@@ -267,7 +269,7 @@ function payModal(){
         '<a href="#" onclick="getCards()" class="button">Get Cards</a>'+
 
         
-        
+      
         
         
                 '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
