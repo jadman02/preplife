@@ -120,10 +120,38 @@ alert('no user');
 };
 
 
+function addUser(){
 
+       $.post( "http://www.recountify.com/savecustomer.php", {uid:f_uid} )
+  .done(function( data ) {    
+
+alert(data);
+    
+           
+firebase.database().ref('users/' + f_uid).update({
+customer_id:data
+  });           
+           
+});  
+
+
+}
 
 function getPreferences(){
+firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
+    var userexists = snapshot.child('lower').exists(); // true
 
+    if (userexists){}
+    else{addUser();}
+    
+    });   
+
+       
+    
+    
+    
+    
+    
     if (user_offers){firebase.database().ref('user_offers/' + f_uid).off('value', user_offers);}
     user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
 
@@ -262,11 +290,7 @@ alert(JSON.stringify(tokenId));
 
     //char
     
-    $.post( "http://www.recountify.com/savecustomer.php", {stripeToken:tokenId.id} )
-  .done(function( data ) {    
 
-alert(data);
-});
     
    
 }
@@ -379,7 +403,8 @@ function startApp(){
   });
     
 
-    window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
+
+
     
    firebase.auth().signInAnonymously().catch(function(error) {
   // Handle Errors here.
