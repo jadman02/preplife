@@ -260,6 +260,8 @@ cordova.plugins.stripe.createCardToken(card, onSuccesscc, onErrorcc);
 function onSuccesscc(tokenId) {
 alert(JSON.stringify(tokenId));
 
+    //char
+    
     $.post( "http://www.recountify.com/savecustomer.php", {stripeToken:tokenId.id} )
   .done(function( data ) {    
 
@@ -377,6 +379,8 @@ function startApp(){
   });
     
 
+    window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
+    
    firebase.auth().signInAnonymously().catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
