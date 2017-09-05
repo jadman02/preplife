@@ -237,7 +237,7 @@ function getCards(){
 
 alert(data);
     
-if (data.length === 0){alert('no cards');}
+if (data == '[]'){alert('no cards');}
            else{alert('got cards');}
            
            
