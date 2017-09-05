@@ -139,7 +139,7 @@ customer_id:data
 
 function getPreferences(){
 firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
-    var userexists = snapshot.child('lower').exists(); // true
+    var userexists = snapshot.child('customer_id').exists(); // true
 
     if (userexists){}
     else{addUser();}
