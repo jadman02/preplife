@@ -237,7 +237,27 @@ function getCards(){
 
 alert(data);
     
-if (data == '[]'){alert('no cards');}
+if (data == '[]'){
+$('.newcarddiv').show();
+    var stripe = Stripe('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+var style = {
+  base: {
+    // Add your base input styles here. For example:
+    fontSize: '16px',
+    lineHeight: '24px'
+  }
+};
+
+// Create an instance of the card Element
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+
+}
            else{alert('got cards');}
            
            
@@ -269,7 +289,25 @@ function payModal(){
         '<a href="#" onclick="getCards()" class="button">Get Cards</a>'+
 
         
-      
+      '<div class="newcarddiv">'+
+        
+       ' <form action="/charge" method="post" id="payment-form">'+
+ ' <div class="form-row">'+
+   ' <label for="card-element">'+
+     ' Credit or debit card'+
+   ' </label>'+
+   ' <div id="card-element">'+
+
+   ' </div>'+
+
+
+    '<div id="card-errors" role="alert"></div>'+
+  '</div>'+
+
+ ' <button>Submit Payment</button>'+
+'</form>'+
+        
+        '</div>'+
         
         
                 '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
