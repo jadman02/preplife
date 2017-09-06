@@ -319,7 +319,7 @@ function payModal(){
 '<div class="pages" style="height:100%;overflow: hidden;">'+
 '<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#ccc;bottom:80px;">'+
+      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#ccc;bottom:60px;">'+
               '  <span class="preloader cards-loader" style="margin:0 auto;margin-top:5px;width:28px;"></span>'+
 
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
@@ -331,7 +331,7 @@ function payModal(){
    ' </div>'+
 
 
-    '<div id="card-errors" role="alert" style="height:25px;display:block;"></div>'+
+    '<div id="card-errors" role="alert" style="height:30px;display:block;"></div>'+
   '</div>'+
 '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
