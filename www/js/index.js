@@ -312,11 +312,11 @@ function payModal(){
  '   </div>'+
 '</div>'+
 '<div class="pages" >'+
-'<div data-page="buypage" class="page" style="margin-bottom:-44px;">'+
+'<div data-page="buypage" class="page" style="height:calc(100% - 44px);overflow:hidden;">'+
 
       
         
-        '<div class="page-content" style="background-color:white;">'+
+        '<div class="page-content" style="background-color:white;overflow:scroll;">'+
    '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
