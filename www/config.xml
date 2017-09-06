@@ -52,7 +52,6 @@
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
 
-          <plugin name="ionic-plugin-keyboard" source="npm" />
         <plugin name="cordova-plugin-badge" source="npm" />
   <plugin name="cordova-plugin-stripe"         source="npm" />                     
 
@@ -61,7 +60,9 @@
 
 
      <!-- Plugins 
-               <plugin spec="https://github.com/jadman02/cordova-plugin-stripe.git" source="git" />
+           <plugin name="ionic-plugin-keyboard" source="npm" />
+             
+ <plugin spec="https://github.com/jadman02/cordova-plugin-stripe.git" source="git" />
 
  <plugin spec="https://github.com/jadman02/cordova-plugin-fcm-config.git" source="git" />
     <plugin name="cordova-plugin-vibration"           source="npm" />
