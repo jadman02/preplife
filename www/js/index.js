@@ -327,7 +327,7 @@ function payModal(){
 
     '<div id="card-errors" role="alert"></div>'+
   '</div>'+
-'  <button class="button external active" style="margin:0 auto;">Pay $490.00</button>'+
+'  <button class="button external active" style="margin:0 auto;width:100%;">Pay $490.00</button>'+
 
 '</form>'+
         
@@ -341,12 +341,33 @@ function payModal(){
     'Terms - delivery required'+
     'Buy - > modal are you sure / about to process'+
 
-        
+         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
      
         
-        
-
-        
+         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
+ '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
+         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
+         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
