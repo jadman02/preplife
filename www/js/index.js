@@ -311,21 +311,20 @@ function payModal(){
         
  '   </div>'+
 '</div>'+
-'<div class="pages">'+
+'<div class="pages" style="margin-bottom:-44px;">'+
 '<div data-page="buypage" class="page">'+
-'<div class="page-content" style="background-color:white;margin-bottom:-44px;">'+
+'<div class="page-content" style="background-color:white;">'+
 
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
     'Counter Offers'+
     'Terms - delivery required'+
     'Buy - > modal are you sure / about to process'+
-        '<a href="#" onclick="getCards()" class="button">Get Cards</a>'+
 
         
       '<div class="newcarddiv">'+
         
-       ' <form action="/charge" method="post" id="payment-form">'+
+       ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
    ' <label for="card-element">'+
    ' </label>'+
@@ -336,7 +335,7 @@ function payModal(){
 
     '<div id="card-errors" role="alert"></div>'+
   '</div>'+
-'  <button class="button external">Submit Payment</button>'+
+'  <button class="button external active" style="margin:0 auto;">Pay $490.00</button>'+
 
 '</form>'+
         
@@ -348,7 +347,7 @@ function payModal(){
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
-
+getCards();
 }
 
 
