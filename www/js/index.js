@@ -271,21 +271,7 @@ card.mount('#card-element');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-
-});
-    
-}
-           else{alert('got cards');}
-           
-           
-});  
-
-}
-
-function getToken(){
-    var stripe = Stripe('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
-
-      stripe.createToken(card).then(function(result) {
+          stripe.createToken(card).then(function(result) {
     if (result.error) {
       // Inform the user if there was an error
       var errorElement = document.getElementById('card-errors');
@@ -300,10 +286,18 @@ function getToken(){
 
     }
   });
-    
-    
+
+});
     
 }
+           else{alert('got cards');}
+           
+           
+});  
+
+}
+
+
 
 function payModal(){
 
@@ -319,7 +313,7 @@ function payModal(){
 '</div>'+
 '<div class="pages">'+
 '<div data-page="buypage" class="page">'+
-'<div class="page-content" style="background-color:white;">'+
+'<div class="page-content" style="background-color:white;margin-bottom:">'+
 
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
@@ -342,8 +336,8 @@ function payModal(){
 
     '<div id="card-errors" role="alert"></div>'+
   '</div>'+
+'  <button class="button external">Submit Payment</button>'+
 
- ' <a href="#" class="button external">Submit Payment</a>'+
 '</form>'+
         
         '</div>'+
