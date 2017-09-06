@@ -319,7 +319,7 @@ function payModal(){
 '<div class="pages" style="height:100%;overflow: hidden;">'+
 '<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="height:100px;position:absolute;bottom:0px;width:100%;z-index:5000000;background-color:#ccc">'+
+      '<div class="newcarddiv" style="height:100px;position:absolute;bottom:64px;width:100%;z-index:5000000;background-color:#ccc">'+
               '  <span class="preloader cards-loader" style="margin:0 auto;"></span>'+
 
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
