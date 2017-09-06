@@ -324,7 +324,7 @@ function payModal(){
 
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
  ' <div class="form-row">'+
-   ' <label for="card-element" style="padding-left:5px;">'+
+   ' <label for="card-element" style="margin-left:5px;">'+
    ' </label>'+
    ' <div id="card-element">'+
 
