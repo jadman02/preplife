@@ -312,12 +312,9 @@ function payModal(){
  '   </div>'+
 '</div>'+
 '<div class="pages" >'+
-'<div data-page="buypage" class="page" style="height:calc(100% - 44px);overflow:hidden;">'+
+'<div data-page="buypage" class="page">'+
 
-      
-        
-        '<div class="page-content" style="background-color:white;overflow:scroll;">'+
-   '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;">'+
+      '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
@@ -335,6 +332,9 @@ function payModal(){
 '</form>'+
         
         '</div>'+
+        
+        '<div class="page-content" style="height:calc(100% - 44px);overflow:scroll;background-color:white;">'+
+   
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
     'Counter Offers'+
