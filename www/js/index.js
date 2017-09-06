@@ -271,18 +271,7 @@ card.mount('#card-element');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // Inform the user if there was an error
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-        alert(errorElement.textContent);
-    } else {
-      // Send the token to your server
-     // stripeTokenHandler(result.token);
-        alert(result.token);
-    }
-  });
+
 });
     
 }
@@ -291,6 +280,29 @@ form.addEventListener('submit', function(event) {
            
 });  
 
+}
+
+function getToken(){
+    var stripe = Stripe('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
+
+      stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the user if there was an error
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+        
+         alert(JSON.stringify(errorElement.textContent));
+    } else {
+      // Send the token to your server
+     // stripeTokenHandler(result.token);
+                 alert(JSON.stringify(result.token));
+
+
+    }
+  });
+    
+    
+    
 }
 
 function payModal(){
