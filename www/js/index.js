@@ -313,7 +313,7 @@ function payModal(){
 '</div>'+
 '<div class="pages">'+
 '<div data-page="buypage" class="page">'+
-'<div class="page-content" style="background-color:white;margin-bottom:">'+
+'<div class="page-content" style="background-color:white;margin-bottom:-44px;">'+
 
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
