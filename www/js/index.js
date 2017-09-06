@@ -313,16 +313,8 @@ function payModal(){
 '</div>'+
 '<div class="pages" style="margin-bottom:-44px;">'+
 '<div data-page="buypage" class="page">'+
-'<div class="page-content" style="background-color:white;">'+
 
-        '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
-
-        
-      '<div class="newcarddiv">'+
+         '<div class="newcarddiv" style="height:88px;position:absolute;bottom:0px;width:1200%;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
@@ -340,6 +332,17 @@ function payModal(){
 '</form>'+
         
         '</div>'+
+        
+        '<div class="page-content" style="background-color:white;">'+
+
+        '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
+        'Accepted Offers'+
+    'Counter Offers'+
+    'Terms - delivery required'+
+    'Buy - > modal are you sure / about to process'+
+
+        
+     
         
         
 
