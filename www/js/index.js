@@ -235,10 +235,14 @@ function getCards(){
        $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
   .done(function( data ) {    
 
-alert(data);
+           
+           $('.cards-loader').hide();
+
     
 if (data == '[]'){
-$('.newcarddiv').show();
+    $('#payment-form').show();
+
+    
     var stripe = Stripe('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
 var elements = stripe.elements();
 
@@ -247,7 +251,8 @@ var style = {
   base: {
     // Add your base input styles here. For example:
     fontSize: '18px',
-    lineHeight: '26px'
+    lineHeight: '26px',
+      color:'white'
   }
 };
 
@@ -314,9 +319,10 @@ function payModal(){
 '<div class="pages" style="height:100%;overflow: hidden;">'+
 '<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;z-index:5000000;">'+
-        
-       ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
+      '<div class="newcarddiv" style="height:88px;position:absolute;bottom:0px;width:100%;z-index:5000000;background-color:#ccc">'+
+              '  <span class="preloader cards-loader" style="margin:0 auto;"></span>'+
+
+       ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;display:none;">'+
  ' <div class="form-row">'+
    ' <label for="card-element">'+
    ' </label>'+
