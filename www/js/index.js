@@ -314,7 +314,7 @@ function payModal(){
 '<div class="pages" style="margin-bottom:-44px;">'+
 '<div data-page="buypage" class="page">'+
 
-         '<div class="newcarddiv" style="height:88px;position:absolute;bottom:0px;width:1200%;">'+
+         '<div class="newcarddiv" style="height:88px;position:absolute;bottom:0px;width:100%;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
