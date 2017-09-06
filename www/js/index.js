@@ -311,10 +311,13 @@ function payModal(){
         
  '   </div>'+
 '</div>'+
-'<div class="pages" style="margin-bottom:-44px;">'+
-'<div data-page="buypage" class="page">'+
+'<div class="pages" >'+
+'<div data-page="buypage" class="page" style="margin-bottom:-44px;">'+
 
-         '<div class="newcarddiv" style="height:88px;position:absolute;bottom:0px;width:100%;">'+
+      
+        
+        '<div class="page-content" style="background-color:white;">'+
+   '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
@@ -332,9 +335,6 @@ function payModal(){
 '</form>'+
         
         '</div>'+
-        
-        '<div class="page-content" style="background-color:white;">'+
-
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
     'Counter Offers'+
