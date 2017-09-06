@@ -246,8 +246,8 @@ var elements = stripe.elements();
 var style = {
   base: {
     // Add your base input styles here. For example:
-    fontSize: '16px',
-    lineHeight: '24px'
+    fontSize: '30px',
+    lineHeight: '30px'
   }
 };
 
