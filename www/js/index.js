@@ -246,8 +246,8 @@ var elements = stripe.elements();
 var style = {
   base: {
     // Add your base input styles here. For example:
-    fontSize: '30px',
-    lineHeight: '30px'
+    fontSize: '18px',
+    lineHeight: '26px'
   }
 };
 
@@ -337,9 +337,7 @@ function payModal(){
         '</div>'+
         
         
-                '<a href="#" onclick="chargeCard()" class="button">Get Card Token</a>'+
 
-        '<a href="#" onclick="saveCustomer()" class="button">Save customer</a>'+
         
         '</div></div></div>'+
                   '</div>';
