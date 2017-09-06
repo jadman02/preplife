@@ -319,10 +319,9 @@ function payModal(){
         
       '<div class="newcarddiv">'+
         
-       ' <form action="/charge" method="post" id="payment-form">'+
+       ' <form action="/charge" method="post" id="payment-form" style="background-color:red;">'+
  ' <div class="form-row">'+
    ' <label for="card-element">'+
-     ' Credit or debit card'+
    ' </label>'+
    ' <div id="card-element">'+
 
@@ -332,7 +331,7 @@ function payModal(){
     '<div id="card-errors" role="alert"></div>'+
   '</div>'+
 
- ' <button>Submit Payment</button>'+
+ ' <a href="#" class="button external">Submit Payment</a>'+
 '</form>'+
         
         '</div>'+
