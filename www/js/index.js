@@ -301,7 +301,7 @@ form.addEventListener('submit', function(event) {
 
 function payModal(){
 
-    var popupHTML = '<div class="popup buypop">'+
+    var popupHTML = '<div class="popup buypop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
@@ -311,10 +311,10 @@ function payModal(){
         
  '   </div>'+
 '</div>'+
-'<div class="pages" >'+
-'<div data-page="buypage" class="page">'+
+'<div class="pages" style="height:100%;overflow: hidden;">'+
+'<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;">'+
+      '<div class="newcarddiv" style="height:88px;position:absolute;bottom:88px;width:100%;z-index:5000000;">'+
         
        ' <form action="/charge" method="post" id="payment-form" style="padding-left:5px;">'+
  ' <div class="form-row">'+
