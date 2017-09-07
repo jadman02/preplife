@@ -317,7 +317,7 @@ function payModal(){
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
    '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
-  '  <div class="center">Select Offer</div>'+
+  '  <div class="center" style="background-color:white;">Select Offer</div>'+
   '  <div class="right"></div>'+
         
  '   </div>'+
@@ -379,7 +379,7 @@ function payModal(){
     '<ul>'+
         ' <li>'+
 '              <label class="label-radio item-content">'+
-        '                <input type="radio" name="my-radio1">'+
+        '                <input type="radio" name="my-radio" checked="checked">'+
 
      '           <div class="item-media">'+
       '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:50px;">'+
@@ -397,7 +397,7 @@ function payModal(){
         '</li>'+
            ' <li>'+
 '              <label class="label-radio item-content">'+
-            '                <input type="radio" name="my-radio2">'+
+            '                <input type="radio" name="my-radio">'+
         '           <div class="item-media">'+
       '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:50px;">'+
        '         </div>'+
