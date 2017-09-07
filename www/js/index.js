@@ -331,7 +331,7 @@ function payModal(){
    ' </div>'+
 
 
-    '<div id="card-errors" role="alert" style="height:30px;display:block;"></div>'+
+    '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
   '</div>'+
 '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
