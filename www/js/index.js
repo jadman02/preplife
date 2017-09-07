@@ -387,6 +387,7 @@ function payModal(){
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
+   myApp.sizeNavbars();
 getCards();
 }
 
