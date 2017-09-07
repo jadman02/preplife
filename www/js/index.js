@@ -378,10 +378,13 @@ function payModal(){
            '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
     '<ul>'+
         ' <li>'+
-                '       <a href="#" class="item-content">'+
+'              <label class="label-radio item-content">'+
+        '                <input type="radio" name="my-radio1">'+
+
      '           <div class="item-media">'+
       '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:50px;">'+
        '         </div>'+
+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
           '              <div class="item-title">Offer accepted </div>'+
@@ -390,11 +393,12 @@ function payModal(){
              '       <div class="item-subtitle">Pay $490.00</div>'+
               '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
-           ' </a>'+
+           ' </label>'+
         '</li>'+
            ' <li>'+
-                '       <a href="#" class="item-content">'+
-     '           <div class="item-media">'+
+'              <label class="label-radio item-content">'+
+            '                <input type="radio" name="my-radio2">'+
+        '           <div class="item-media">'+
       '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:50px;">'+
        '         </div>'+
         '        <div class="item-inner">'+
@@ -405,7 +409,7 @@ function payModal(){
              '       <div class="item-subtitle">Pay $510.00</div>'+
               '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
-           ' </a>'+
+           ' </label>'+
         '</li>'+
     '</ul>'+
     '</div>'+
