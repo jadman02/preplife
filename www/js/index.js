@@ -349,7 +349,7 @@ function payModal(){
         
         '</div>'+
         
-        '<div class="page-content" style="height:calc(100% - 132px);overflow:scroll;background-color:white;">'+
+        '<div class="page-content" style="height:calc(100% - 44px);overflow:scroll;background-color:white;padding-bottom:132px;">'+
    
            ' <div class="content-block-title">Item for Sale</div>'+
 
@@ -411,7 +411,7 @@ function payModal(){
     '</ul>'+
     '</div>'+
 
-
+'</br></br></br></br></br></br></br>hhh</br></br></br></br></br></br>jjj</br></br></br></br></br>kkk'+
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
