@@ -317,7 +317,7 @@ function payModal(){
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
    '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
-  '  <div class="center">Buy</div>'+
+  '  <div class="center">Buy Dishwasher</div>'+
   '  <div class="right"></div>'+
         
  '   </div>'+
