@@ -317,7 +317,7 @@ function payModal(){
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
    '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
-  '  <div class="center" style="background-color:white;">Select Offer</div>'+
+  '  <div class="center" style="color:white;">Select Offer</div>'+
   '  <div class="right"></div>'+
         
  '   </div>'+
