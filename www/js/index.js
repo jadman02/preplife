@@ -321,7 +321,7 @@ function payModal(){
 
       '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#ccc;bottom:60px;">'+
 
-       '  <div class="col-25 cards-loader" style="texta-lign:center;margin:0 auto;">'+
+       '  <div class="col-25 cards-loader" style="padding-top:5px;padding-bottom:5px;text-align:center;margin:0 auto;">'+
      '   <span class="preloader"></span>'+
     '  </div>'+
  
