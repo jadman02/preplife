@@ -358,7 +358,7 @@ function payModal(){
         ' <li>'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
-      '              			<img src="https://thegoodguys.sirv.com/products/50027226/50027226_105374.PNG" style="width:100%;">'+
+      '              			<img src="https://thegoodguys.sirv.com/products/50027226/50027226_105374.PNG" style="width:50px;">'+
        '         </div>'+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
@@ -381,30 +381,30 @@ function payModal(){
         ' <li>'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
-      '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:100%;">'+
+      '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:50px;">'+
        '         </div>'+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">Dishwasher </div>'+
+          '              <div class="item-title">Offer accepted </div>'+
          //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">Offer accepted</div>'+
-              '      <div class="item-text">Pay $490.00</div>'+
+             '       <div class="item-subtitle">Pay $490.00</div>'+
+              '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
            ' </a>'+
         '</li>'+
            ' <li>'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
-      '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:100%;">'+
+      '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:50px;">'+
        '         </div>'+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">Dishwasher </div>'+
+          '              <div class="item-title">Counter offer</div>'+
          //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">Counter offer</div>'+
-              '      <div class="item-text">Pay $510.00</div>'+
+             '       <div class="item-subtitle">Pay $510.00</div>'+
+              '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
            ' </a>'+
         '</li>'+
