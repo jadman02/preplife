@@ -351,7 +351,6 @@ function payModal(){
         
         '<div class="page-content" style="height:calc(100% - 44px);overflow:scroll;background-color:white;padding-bottom:132px;">'+
    
-           ' <div class="content-block-title">Item for Sale</div>'+
 
         '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
     '<ul>'+
