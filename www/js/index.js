@@ -410,40 +410,8 @@ function payModal(){
         '</li>'+
     '</ul>'+
     '</div>'+
-        
-        '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
 
-         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
-     
-        
-         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
- '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
-         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
-         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
-        'Accepted Offers'+
-    'Counter Offers'+
-    'Terms - delivery required'+
-    'Buy - > modal are you sure / about to process'+
+
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
