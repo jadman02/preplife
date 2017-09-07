@@ -317,7 +317,7 @@ function payModal(){
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
    '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
-  '  <div class="center">Buy Dishwasher</div>'+
+  '  <div class="center">Select Offer</div>'+
   '  <div class="right"></div>'+
         
  '   </div>'+
@@ -351,6 +351,66 @@ function payModal(){
         
         '<div class="page-content" style="height:calc(100% - 44px);overflow:scroll;background-color:white;">'+
    
+           ' <div class="content-block-title">Item for Sale</div>'+
+
+        '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
+    '<ul>'+
+        ' <li>'+
+                '       <a href="#" class="item-content">'+
+     '           <div class="item-media">'+
+      '              			<img src="https://thegoodguys.sirv.com/products/50027226/50027226_105374.PNG" style="width:100%;">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">Dishwasher </div>'+
+         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">Bosch / SMAU187GH4567 XX8</div>'+
+              '      <div class="item-text">Your offer: $490.00</div>'+
+               ' </div>'+
+           ' </a>'+
+        '</li>'+
+    '</ul>'+
+    '</div>'+
+        
+                   ' <div class="content-block-title">Available offers</div>'+
+
+        
+           '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
+    '<ul>'+
+        ' <li>'+
+                '       <a href="#" class="item-content">'+
+     '           <div class="item-media">'+
+      '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:100%;">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">Dishwasher </div>'+
+         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">Offer accepted</div>'+
+              '      <div class="item-text">Pay $490.00</div>'+
+               ' </div>'+
+           ' </a>'+
+        '</li>'+
+           ' <li>'+
+                '       <a href="#" class="item-content">'+
+     '           <div class="item-media">'+
+      '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:100%;">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">Dishwasher </div>'+
+         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">Counter offer</div>'+
+              '      <div class="item-text">Pay $510.00</div>'+
+               ' </div>'+
+           ' </a>'+
+        '</li>'+
+    '</ul>'+
+    '</div>'+
+        
         '<br/><br/><br/><br/>Product Info - Price Details / Specifications / Image'+
         'Accepted Offers'+
     'Counter Offers'+
