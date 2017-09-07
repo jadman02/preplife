@@ -152,39 +152,7 @@ firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
     
     
     
-    if (user_offers){firebase.database().ref('user_offers/' + f_uid).off('value', user_offers);}
-    user_offers = firebase.database().ref('user_offers/' +f_uid).on('value', function(snapshot) {
-
-        
-        if (snapshot.val()){
-$('.accordianul').empty();
-var objs = snapshot.val();
-
-$.each(objs, function(i, obj) {
-
-    $('.accordianul').append(
-    ' <li onclick="payModal()">'+
-                '       <a href="#" class="item-content">'+
-     '           <div class="item-media">'+
-      '              <img src="path/to/img.jpg">'+
-       '         </div>'+
-        '        <div class="item-inner">'+
-         '           <div class="item-title-row">'+
-          '              <div class="item-title">'+obj.category+' </div>'+
-           '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
-            '        </div>'+
-             '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
-              '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
-               ' </div>'+
-           ' </a>'+
-        '</li>'
-    );
-    
-    
-    });
-        }
-    
-    });
+  
 
     if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
     business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot) {
@@ -228,6 +196,44 @@ $.each(objs, function(i, obj) {
  
     businessOffer();
     
+}
+
+function populateOffers(){
+
+
+    user_offers = firebase.database().ref('user_offers/' +f_uid).once('value', function(snapshot) {
+
+        
+        if (snapshot.val()){
+$('.accordianul').empty();
+var objs = snapshot.val();
+
+$.each(objs, function(i, obj) {
+
+    $('.accordianul').append(
+    ' <li onclick="payModal()">'+
+                '       <a href="#" class="item-content">'+
+     '           <div class="item-media">'+
+      '              <img src="path/to/img.jpg">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">'+obj.category+' </div>'+
+           '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
+              '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
+               ' </div>'+
+           ' </a>'+
+        '</li>'
+    );
+    
+    
+    });
+        }
+    
+    });
+
 }
 
 function getCards(){
