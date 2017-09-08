@@ -355,7 +355,7 @@ function payModal(){
         '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
     '<ul>'+
         ' <li>'+
-                '       <a href="#" class="item-content">'+
+                '       <div class="item-content item-link">'+
      '           <div class="item-media">'+
       '              			<img src="https://thegoodguys.sirv.com/products/50027226/50027226_105374.PNG" style="width:50px;">'+
        '         </div>'+
@@ -367,7 +367,7 @@ function payModal(){
              '       <div class="item-subtitle">Bosch / SMAU187GH4567 XX8</div>'+
               '      <div class="item-text">Your offer: $490.00</div>'+
                ' </div>'+
-           ' </a>'+
+           ' </div>'+
         '</li>'+
     '</ul>'+
     '</div>'+
