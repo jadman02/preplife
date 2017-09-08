@@ -325,7 +325,7 @@ function payModal(){
 '<div class="pages" style="height:100%;overflow: hidden;">'+
 '<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#00bcd4;bottom:60px;">'+
+      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#f7f7f8;bottom:60px;">'+
 
        '  <div class="col-25 cards-loader" style="padding-top:5px;padding-bottom:5px;text-align:center;margin:0 auto;">'+
      '   <span class="preloader"></span>'+
@@ -364,8 +364,10 @@ function payModal(){
           '              <div class="item-title">Dishwasher </div>'+
          //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">Bosch / SMAU187GH4567 XX8</div>'+
-              '      <div class="item-text">Your offered to pay: $490.00</div>'+
+             '       <div class="item-subtitle">Bosch</div>'+
+                     '       <div class="item-subtitle">SMAU187GH4567 XX8</div>'+
+
+              '      <div class="item-text">You offered to pay: $490.00</div>'+
                ' </div>'+
            ' </div>'+
         '</li>'+
@@ -387,12 +389,10 @@ function payModal(){
 
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">Pay $490.00</div>'+
+          '              <div class="item-title">$490.00</div>'+
          //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
              '       <div class="item-subtitle">JB HI-FI</div>'+
-                     '       <div class="item-subtitle">JB HI-FI</div>'+
-
               '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
            ' </label>'+
@@ -405,10 +405,10 @@ function payModal(){
        '         </div>'+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">Counter offer</div>'+
+          '              <div class="item-title">$510.00</div>'+
          //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">Pay $510.00</div>'+
+             '       <div class="item-subtitle">The Good Guys</div>'+
               '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
            ' </label>'+
