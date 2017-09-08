@@ -292,6 +292,14 @@ form.addEventListener('submit', function(event) {
     } else {
       // Send the token to your server
      // stripeTokenHandler(result.token);
+        
+        
+        //send ne payment details, and will make a charge
+        $.post( "http://www.recountify.com/newcard.php", {uid:f_uid,newtoken:result.token.id,amount:100,currency:'AUD'} )
+  .done(function( data ) {  
+            alert(data);
+            });
+        
                  alert(JSON.stringify(result.token));
 
 
