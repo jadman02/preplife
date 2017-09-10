@@ -153,19 +153,18 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
 
     alert(userexists);
     
-    if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
-else {}
+   
     
     if (userexists){
     
         f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
-    
-    business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot) {
+     if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
+    business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot2) {
 
         
-        if (snapshot.val()){
+        if (snapshot2.val()){
 $('.offersul').empty();
-var objs = snapshot.val();
+var objs = snapshot2.val();
 
 $.each(objs, function(i, obj) {
 
@@ -191,7 +190,12 @@ $.each(objs, function(i, obj) {
     });
         
     }
-    else{addUser();}
+    else{
+    
+     $('.offersul').empty();
+            $('.offersul').append('<div class="content-block-title">No offers received yet</div>');
+        
+    }
     
     });   
 
@@ -207,14 +211,13 @@ $.each(objs, function(i, obj) {
         }
         
         else{
-            $('.offersul').empty();
-            $('.offersul').append('<div class="content-block-title">No offers received yet</div>');
-        
+            addUser();
+           
         }
     
     });
  
-    //businessOffer();
+
     
 }
 
