@@ -125,7 +125,7 @@ alert('no user');
 function addUser(){
 
 
-
+alert('adding user');
  var d_unix = Math.round(+new Date()/1000);
     var suffix = f_auth_id.substr(f_auth_id.length - 5);
             f_uid = suffix + '_' + d_unix;
@@ -154,7 +154,7 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
     alert(userexists);
     
     if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
-
+else {}
     
     if (userexists){
     
@@ -214,7 +214,7 @@ $.each(objs, function(i, obj) {
     
     });
  
-    businessOffer();
+    //businessOffer();
     
 }
 
