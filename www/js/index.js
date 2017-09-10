@@ -155,22 +155,7 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
     
         f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
     
-
-        
-    }
-    else{addUser();}
-    
-    });   
-
-       
-    
-    
-    
-    
-    
-  
-
-    if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
+if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
     business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot) {
 
         
@@ -200,6 +185,21 @@ $.each(objs, function(i, obj) {
     
     
     });
+        
+    }
+    else{addUser();}
+    
+    });   
+
+       
+    
+    
+    
+    
+    
+  
+
+    
         }
         
         else{
