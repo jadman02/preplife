@@ -1,11 +1,13 @@
 
 var f_token;
 var f_uid;
+var f_auth_id;
 var myApp = new Framework7();
 var $$ = Dom7;
 var view1, view2, view3;
 var user_offers;
 var business_notifs; 
+
 // Export selectors engine
 
 
@@ -81,7 +83,7 @@ view3 = myApp.addView('#view-3');
 
   
   if (user) {
-      f_uid = firebase.auth().currentUser.uid;
+      f_auth_id = firebase.auth().currentUser.uid;
 setTimeout(function(){ $( ".ploader" ).slideUp();$( ".toolbar" ).show(); }, 2000);
        
 getPreferences();
@@ -122,14 +124,20 @@ alert('no user');
 
 function addUser(){
 
-       $.post( "http://www.recountify.com/savecustomer.php", {uid:f_uid} )
+
+
+ var d_unix = Math.round(+new Date()/1000);
+    var suffix = f_auth_id.substr(f_auth_id.length - 5);
+       $.post( "http://www.recountify.com/savecustomer.php", {uid:f_auth_id} )
   .done(function( data ) {    
 
 alert(data);
     
            
-firebase.database().ref('users/' + f_uid).update({
-customer_id:data
+firebase.database().ref('users/' + f_auth_id).update({
+customer_id:data,
+    created:d_unix,
+    suffix:suffix
   });           
            
 });  
@@ -138,10 +146,14 @@ customer_id:data
 }
 
 function getPreferences(){
-firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
+firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
     var userexists = snapshot.child('customer_id').exists(); // true
 
-    if (userexists){}
+    if (userexists){
+    
+        f_uid = snapshot.child('suffix') + '_' + snapshot.child('created');
+    
+    }
     else{addUser();}
     
     });   
