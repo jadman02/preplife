@@ -151,6 +151,8 @@ function getPreferences(){
 firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
     var userexists = snapshot.child('customer_id').exists(); // true
 
+    alert(userexists);
+    
     if (userexists){
     
         f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
