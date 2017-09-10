@@ -153,8 +153,10 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
 
     if (userexists){
     
-        f_uid = snapshot.child('suffix') + '_' + snapshot.child('created');
+        f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
     
+
+        
     }
     else{addUser();}
     
