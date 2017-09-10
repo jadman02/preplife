@@ -160,8 +160,8 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
         f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
      if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
     business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot2) {
-
-        
+alert(JSON.stringify(snapshot2.val()));
+ 
         if (snapshot2.val()){
 $('.offersul').empty();
 var objs = snapshot2.val();
