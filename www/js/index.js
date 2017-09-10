@@ -128,6 +128,8 @@ function addUser(){
 
  var d_unix = Math.round(+new Date()/1000);
     var suffix = f_auth_id.substr(f_auth_id.length - 5);
+            f_uid = suffix + '_' + d_unix;
+
        $.post( "http://www.recountify.com/savecustomer.php", {uid:f_auth_id} )
   .done(function( data ) {    
 
