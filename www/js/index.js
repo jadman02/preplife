@@ -153,11 +153,13 @@ firebase.database().ref('users/' + f_auth_id).once("value",function(snapshot) {
 
     alert(userexists);
     
+    if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
+
+    
     if (userexists){
     
         f_uid = snapshot.child('suffix').val() + '_' + snapshot.child('created').val();
     
-if (business_notifs){firebase.database().ref('business_notifs/' + f_uid).off('value', business_notifs);}
     business_notifs = firebase.database().ref('business_notifs/' +f_uid).on('value', function(snapshot) {
 
         
