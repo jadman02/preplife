@@ -530,7 +530,7 @@ var targetData = {
 
 function submitOffer(){
 
-    
+    alert(f_uid);
   var newPostKey = firebase.database().ref().push().key;
 var t_unix = Math.round(+new Date()/1000);
 
