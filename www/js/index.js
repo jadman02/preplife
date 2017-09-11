@@ -424,7 +424,12 @@ function payModal(){
    myApp.sizeNavbars();
 //getCards();
 
- 
+ return firebase.database().ref('business_notifs/' +f_uid).once('value').then(function(snapshot) {
+alert(JSON.stringify(snapshot.val())); 
+     
+     
+
+});
     
     
     
