@@ -435,7 +435,7 @@ $.each(objs, function(i, obk) {
             
 $.each(obk, function(i, obj) {
 
-    $('.offersul').append(
+    $('.radioul').append(
    ' <li>'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="my-radio" checked="checked">'+
