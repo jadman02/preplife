@@ -425,8 +425,38 @@ function payModal(){
 //getCards();
 
  return firebase.database().ref('business_notifs/' +f_uid).once('value').then(function(snapshot) {
-alert(JSON.stringify(snapshot.val())); 
-     
+
+     if (snapshot.val()){
+$('.radioul').empty();
+var objs = snapshot.val();
+
+$.each(objs, function(i, obk) {            
+            
+$.each(obk, function(i, obj) {
+
+    $('.offersul').append(
+    ' <li onclick="payModal()">'+
+                '       <a href="#" class="item-content">'+
+     '           <div class="item-media">'+
+      '              <img src="path/to/img.jpg">'+
+       '         </div>'+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">'+obj.category+' </div>'+
+           '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
+              '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
+               ' </div>'+
+           ' </a>'+
+        '</li>'
+    );
+    
+    
+    });
+    });
+        
+    }
      
 
 });
