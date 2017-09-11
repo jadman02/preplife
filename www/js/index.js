@@ -426,7 +426,7 @@ function payModal(){
 
 firebase.database().ref('business_notifs/' +f_uid).once'value', function(snapshot2) {
 
- alert(JSON.stringify(snapshot2.val())); 
+alert('yo');
 
 
             });  
