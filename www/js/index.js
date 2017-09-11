@@ -428,7 +428,7 @@ function payModal(){
 
  
         if (snapshot2.val()){
-$('.offersul').empty();
+$('.radioul').empty();
 var objs = snapshot2.val();
 
 $.each(objs, function(i, obk) {            
@@ -459,6 +459,8 @@ $.each(obk, function(i, obj) {
     
     });
     });
+        }
+            });
     
     
     
