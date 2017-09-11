@@ -412,41 +412,8 @@ function payModal(){
 
         
            '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
-    '<ul>'+
-        ' <li>'+
-'              <label class="label-radio item-content">'+
-        '                <input type="radio" name="my-radio" checked="checked">'+
+    '<ul class="radioul">'+
 
-     '           <div class="item-media">'+
-      '              <img src="https://www.jbhifi.com.au/Global/images/logos/JB-AU-HorizontalLogo-Notag-Nobracket-Thumb.jpg" style="width:50px;">'+
-       '         </div>'+
-
-        '        <div class="item-inner">'+
-         '           <div class="item-title-row">'+
-          '              <div class="item-title">$490.00</div>'+
-         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
-            '        </div>'+
-             '       <div class="item-subtitle">JB HI-FI</div>'+
-              '      <div class="item-text">Delivery included</div>'+
-               ' </div>'+
-           ' </label>'+
-        '</li>'+
-           ' <li>'+
-'              <label class="label-radio item-content">'+
-            '                <input type="radio" name="my-radio">'+
-        '           <div class="item-media">'+
-      '              <img src="https://www.thegoodguys.com.au/cs/groups/public/documents/web_asset/good-guys-logo-main.svg" style="width:50px;">'+
-       '         </div>'+
-        '        <div class="item-inner">'+
-         '           <div class="item-title-row">'+
-          '              <div class="item-title">$510.00</div>'+
-         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
-            '        </div>'+
-             '       <div class="item-subtitle">The Good Guys</div>'+
-              '      <div class="item-text">Delivery included</div>'+
-               ' </div>'+
-           ' </label>'+
-        '</li>'+
     '</ul>'+
     '</div>'+
 
@@ -455,7 +422,46 @@ function payModal(){
                   '</div>';
   myApp.popup(popupHTML);
    myApp.sizeNavbars();
-getCards();
+//getCards();
+
+      business_notifs = firebase.database().ref('business_notifs/' +f_uid).once'value', function(snapshot2) {
+
+ 
+        if (snapshot2.val()){
+$('.offersul').empty();
+var objs = snapshot2.val();
+
+$.each(objs, function(i, obk) {            
+            
+$.each(obk, function(i, obj) {
+
+    $('.offersul').append(
+   ' <li>'+
+'              <label class="label-radio item-content">'+
+        '                <input type="radio" name="my-radio" checked="checked">'+
+
+     '           <div class="item-media">'+
+      '              <img src="'+obj.image+'" style="width:50px;">'+
+       '         </div>'+
+
+        '        <div class="item-inner">'+
+         '           <div class="item-title-row">'+
+          '              <div class="item-title">$'+obj.new_offer+'</div>'+
+         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+            '        </div>'+
+             '       <div class="item-subtitle">JB HI-FI</div>'+
+              '      <div class="item-text">Delivery included</div>'+
+               ' </div>'+
+           ' </label>'+
+        '</li>'
+    );
+    
+    
+    });
+    });
+    
+    
+    
 }
 
 
