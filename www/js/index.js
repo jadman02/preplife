@@ -264,6 +264,8 @@ $.each(objs, function(i, obj) {
 
 function getCards(){
 
+    
+    $('.newcarddiv').show();
        $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
   .done(function( data ) {    
 
@@ -359,7 +361,7 @@ function payModal(){
 '<div class="pages" style="height:100%;overflow: hidden;">'+
 '<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
 
-      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#f7f7f8;bottom:60px;">'+
+      '<div class="newcarddiv" style="position:absolute;width:100%;z-index:5000000;background-color:#f7f7f8;bottom:60px;display:none;">'+
 
        '  <div class="col-25 cards-loader" style="padding-top:5px;padding-bottom:5px;text-align:center;margin:0 auto;">'+
      '   <span class="preloader"></span>'+
@@ -422,7 +424,7 @@ function payModal(){
                   '</div>';
   myApp.popup(popupHTML);
    myApp.sizeNavbars();
-//getCards();
+
 
  return firebase.database().ref('business_notifs/' +f_uid).once('value').then(function(snapshot) {
 
@@ -435,7 +437,7 @@ $.each(objs, function(i, obk) {
 $.each(obk, function(i, obj) {
 
     $('.radioul').append(
-   ' <li>'+
+   ' <li onclick="getCards()">'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="my-radio">'+
 
