@@ -166,7 +166,9 @@ alert(JSON.stringify(snapshot2.val()));
 $('.offersul').empty();
 var objs = snapshot2.val();
 
-$.each(objs, function(i, obj) {
+$.each(objs, function(i, obk) {            
+            
+$.each(obk, function(i, obj) {
 
     $('.offersul').append(
     ' <li onclick="payModal()">'+
@@ -187,6 +189,7 @@ $.each(objs, function(i, obj) {
     );
     
     
+    });
     });
         
     }
