@@ -437,7 +437,7 @@ $.each(obk, function(i, obj) {
     $('.radioul').append(
    ' <li>'+
 '              <label class="label-radio item-content">'+
-        '                <input type="radio" name="my-radio" checked="checked">'+
+        '                <input type="radio" name="my-radio">'+
 
      '           <div class="item-media">'+
       '              <img src="'+obj.image+'" style="width:50px;">'+
