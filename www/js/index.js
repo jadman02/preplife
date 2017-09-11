@@ -424,43 +424,7 @@ function payModal(){
    myApp.sizeNavbars();
 //getCards();
 
-      business_notifs = firebase.database().ref('business_notifs/' +f_uid).once'value', function(snapshot2) {
-
- 
-        if (snapshot2.val()){
-$('.radioul').empty();
-var objs = snapshot2.val();
-
-$.each(objs, function(i, obk) {            
-            
-$.each(obk, function(i, obj) {
-
-    $('.radioul').append(
-   ' <li>'+
-'              <label class="label-radio item-content">'+
-        '                <input type="radio" name="my-radio" checked="checked">'+
-
-     '           <div class="item-media">'+
-      '              <img src="'+obj.image+'" style="width:50px;">'+
-       '         </div>'+
-
-        '        <div class="item-inner">'+
-         '           <div class="item-title-row">'+
-          '              <div class="item-title">$'+obj.new_offer+'</div>'+
-         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
-            '        </div>'+
-             '       <div class="item-subtitle">JB HI-FI</div>'+
-              '      <div class="item-text">Delivery included</div>'+
-               ' </div>'+
-           ' </label>'+
-        '</li>'
-    );
     
-    
-    });
-    });
-        }
-            });
     
     
     
