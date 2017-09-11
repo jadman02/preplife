@@ -434,21 +434,24 @@ $.each(objs, function(i, obk) {
             
 $.each(obk, function(i, obj) {
 
-    $('.offersul').append(
-    ' <li onclick="payModal()">'+
-                '       <a href="#" class="item-content">'+
+    $('.radioul').append(
+   ' <li>'+
+'              <label class="label-radio item-content">'+
+        '                <input type="radio" name="my-radio" checked="checked">'+
+
      '           <div class="item-media">'+
-      '              <img src="path/to/img.jpg">'+
+      '              <img src="'+obj.image+'" style="width:50px;">'+
        '         </div>'+
+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">'+obj.category+' </div>'+
-           '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+          '              <div class="item-title">$'+obj.new_offer+'</div>'+
+         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">'+obj.brand+' / '+obj.model+'</div>'+
-              '      <div class="item-text">Your offer: $ '+obj.offer+'</div>'+
+             '       <div class="item-subtitle">JB HI-FI</div>'+
+              '      <div class="item-text">Delivery included</div>'+
                ' </div>'+
-           ' </a>'+
+           ' </label>'+
         '</li>'
     );
     
@@ -464,6 +467,8 @@ $.each(obk, function(i, obj) {
     
     
 }
+
+
 
 
 
