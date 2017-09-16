@@ -296,35 +296,50 @@ card.mount('#card-element');
 });
     
     var form = document.getElementById('payment-form');
+    
+    
+    var ownerInfo = {
+  owner: {
+    name: 'Jenny Rosen',
+    address: {
+      line1: 'Nollendorfstraße 27',
+      city: 'Berlin',
+      postal_code: '10777',
+      country: 'DE',
+    },
+    email: 'jenny.rosen@example.com'
+  },
+};
+    
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-          stripe.createToken(card).then(function(result) {
+    
+
+
+  stripe.createSource(card, ownerInfo).then(function(result) {
     if (result.error) {
       // Inform the user if there was an error
       var errorElement = document.getElementById('card-errors');
       errorElement.textContent = result.error.message;
-        
-         alert(JSON.stringify(errorElement.textContent));
+        alert(JSON.stringify(errorElement.textContent));
     } else {
-      // Send the token to your server
-     // stripeTokenHandler(result.token);
-        
-
-        //need to get amount
-        //need to get publishable key
-        
-        
-        //send ne payment details, and will make a charge
-        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:result.token.id,amount:100,currency:'AUD'} )
-  .done(function( data ) {  
-            alert(data);
-            });
-        
-                 alert(JSON.stringify(result.token));
-
-
+      // Send the source to your server
+      stripeSourceHandler(result.source);
+        alert(JSON.stringify(result.source));
+  //      $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:result.source.id,amount:100,currency:'AUD'} )
+  //.done(function( data ) {  
+    //        alert(data);
+      //      });
     }
+    
+    
+    
+    
+    
+    
+    
+
   });
 
 });
