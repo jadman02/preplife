@@ -326,11 +326,7 @@ form.addEventListener('submit', function(event) {
     } else {
       // Send the source to your server
       stripeSourceHandler(result.source);
-        alert(JSON.stringify(result.source));
-  //      $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:result.source.id,amount:100,currency:'AUD'} )
-  //.done(function( data ) {  
-    //        alert(data);
-      //      });
+        
     }
     
     
@@ -344,6 +340,26 @@ form.addEventListener('submit', function(event) {
 
 });
 
+}
+
+function stripeSourceHandler(source) {
+  // Insert the source ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeSource');
+  hiddenInput.setAttribute('value', source.id);
+  form.appendChild(hiddenInput);
+
+    
+    alert(JSON.stringify(source.id));
+  //      $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:result.source.id,amount:100,currency:'AUD'} )
+  //.done(function( data ) {  
+    //        alert(data);
+      //      });
+    
+  // Submit the form
+  form.submit();
 }
 
 function getCards(){
