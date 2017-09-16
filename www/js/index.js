@@ -262,21 +262,10 @@ $.each(objs, function(i, obj) {
 
 }
 
-function getCards(){
 
-    
-    $('.newcarddiv').show();
-       $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
-  .done(function( data ) {    
+function loadElements(){
 
-           
-           $('.cards-loader').hide();
-
-    
-if (data == '[]'){
-    $('#payment-form').show();
-
-    
+     
     var stripe = Stripe('pk_test_SlHSaf1IHRTUDWENH6xdunK9');
 var elements = stripe.elements();
 
@@ -321,6 +310,10 @@ form.addEventListener('submit', function(event) {
       // Send the token to your server
      // stripeTokenHandler(result.token);
         
+
+        //need to get amount
+        //need to get publishable key
+        
         
         //send ne payment details, and will make a charge
         $.post( "http://www.recountify.com/newcard.php", {uid:f_uid,newtoken:result.token.id,amount:100,currency:'AUD'} )
@@ -335,6 +328,32 @@ form.addEventListener('submit', function(event) {
   });
 
 });
+
+}
+
+function getCards(){
+
+    
+    $('.newcarddiv').show();
+       $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
+  .done(function( data ) {    
+
+           
+           $('.cards-loader').hide();
+
+    
+if (data == '[]'){
+    $('#payment-form').show();
+
+
+if( $('#card-element').is(':empty') ) {alert('card-element is empty');loadElements();}
+    else {alert('card-element is not empty');}
+    
+    
+
+    
+    
+   
     
 }
            else{alert('got cards');}
