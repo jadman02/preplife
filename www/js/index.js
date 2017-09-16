@@ -335,7 +335,7 @@ function getCards(){
 
     
     $('.newcarddiv').show();
-       $.post( "http://www.recountify.com/getcards.php", {uid:f_uid} )
+       $.post( "http://www.recountify.com/getcards.php", {uid:f_auth_id} )
   .done(function( data ) {    
 
            
