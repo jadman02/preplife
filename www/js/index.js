@@ -356,7 +356,10 @@ if( $('#card-element').is(':empty') ) {alert('card-element is empty');loadElemen
    
     
 }
-           else{alert('got cards');}
+           else{
+                alert(JSON.stringify(data));
+               
+               alert('got cards');}
            
            
 });  
