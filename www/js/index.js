@@ -352,7 +352,7 @@ function stripeSourceHandler(source) {
   form.appendChild(hiddenInput);
 
     
-    alert(JSON.stringify(source.id));
+    alert(JSON.stringify(source));
         $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:100,currency:'AUD'} )
   .done(function( data ) {  
             alert(data);
