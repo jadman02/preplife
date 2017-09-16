@@ -346,7 +346,7 @@ if (data == '[]'){
     $('#payment-form').show();
 
 
-    if( $(".cards-loader").css('display') == 'none') {alert('card-element is empty');loadElements();}
+    if( $(".cards-loader").css('display') == 'block') {alert('card-element is empty');loadElements();}
     else{alert('card-element is not empty');}
     
 
