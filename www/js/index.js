@@ -339,15 +339,17 @@ function getCards(){
   .done(function( data ) {    
 
            alert(data);
-           $('.cards-loader').hide();
+           
 
     
 if (data == '[]'){
     $('#payment-form').show();
 
 
-if( $('#card-element').is(':empty') ) {alert('card-element is empty');loadElements();}
-    else {alert('card-element is not empty');}
+    if( $(".cards-loader").css('display') == 'none') {alert('card-element is empty');loadElements();}
+    else{alert('card-element is not empty');}
+    
+
     
     
 
@@ -361,7 +363,9 @@ if( $('#card-element').is(':empty') ) {alert('card-element is empty');loadElemen
                
                alert('got cards');}
            
-           
+
+    $('.cards-loader').hide();
+    
 });  
 
 }
