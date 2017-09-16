@@ -353,13 +353,13 @@ function stripeSourceHandler(source) {
 
     
     alert(JSON.stringify(source.id));
-  //      $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:result.source.id,amount:100,currency:'AUD'} )
-  //.done(function( data ) {  
-    //        alert(data);
-      //      });
+        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:100,currency:'AUD'} )
+  .done(function( data ) {  
+            alert(data);
+            });
     
   // Submit the form
-  form.submit();
+ // form.submit();
 }
 
 function getCards(){
