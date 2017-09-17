@@ -370,9 +370,7 @@ function getCards(){
 
            
            
-           for (i = 0; i < data.length; i++) { 
-   alert(data[i].card.last);
-}
+   
 
     
 if (data == '[]'){
@@ -392,9 +390,15 @@ if (data == '[]'){
     
 }
            else{
-                alert(JSON.stringify(data));
+
                
-               alert('got cards');}
+                       for (i = 0; i < data.length; i++) { 
+   alert(data[i].card.last);
+                           alert(data[i].card.brand);
+}
+              $('#payment-form').show();
+     
+               alert('got cards - need to put source in and add a button to change or add new card');}
            
 
     $('.cards-loader').hide();
