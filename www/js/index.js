@@ -274,8 +274,7 @@ var style = {
   base: {
     // Add your base input styles here. For example:
     fontSize: '18px',
-    lineHeight: '22px',
-      color:'white'
+    lineHeight: '22px'
   }
 };
 
@@ -369,8 +368,11 @@ function getCards(){
        $.post( "http://www.recountify.com/getcards.php", {uid:f_auth_id} )
   .done(function( data ) {    
 
-           alert(data);
            
+           
+           for (i = 0; i < data.length; i++) { 
+   alert(data[i].card.last);
+}
 
     
 if (data == '[]'){
