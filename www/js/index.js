@@ -393,12 +393,16 @@ if (data == '[]'){
 
 alert(data);  
                  
-
-               for (i = 0; i < data.length; i++) { 
-alert(i);
+var sources=[];
+for(var i=0;i<data.length;i++){
+   sources.push(data[i].id);
 }
+
+               alert(sources[0]);
                
-               alert(data.id);
+
+               
+               
               $('#payment-form').show();
      
                alert('got cards - need to put source in and add a button to change or add new card');}
