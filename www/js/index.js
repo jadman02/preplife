@@ -392,10 +392,10 @@ if (data == '[]'){
            else{
 
                $('#payment-form').show();
-               
-alert(data.id);          
-               alert(data.card.last4); 
-alert(data);               
+     alert(data);           
+alert(data[0].id);          
+               alert(data[0].card.last4); 
+              
 
                //for (i = 0; i < data.length; i++) { 
   // alert(data[i].card.last);
