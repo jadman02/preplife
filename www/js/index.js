@@ -401,7 +401,11 @@ alert(result9[0].id);
                
                
               $('#existing-form').show();
+              $('#payment-form').show();
+               loadElement();
      
+               
+               
                alert('got cards - need to put source in and add a button to change or add new card');}
            
 
@@ -434,7 +438,12 @@ function payModal(){
      '   <span class="preloader"></span>'+
     '  </div>'+
  
-        '<div id="existing-form"><i class="pf pf-stripe"></i> 4242 CHANGE</div>'+
+        '<div id="existing-form" style="display:none;font-size:18px;line-height:22px;">'+
+    
+    '<i class="pf pf-stripe"></i> 4242 CHANGE'+
+    '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
+
+    '</div>'+
         
         
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
