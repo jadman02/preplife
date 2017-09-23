@@ -390,15 +390,11 @@ if (data == '[]'){
     
 }
            else{
+var result9 = JSON.parse(data); 
 
-alert(data);  
+alert(result9.id);  
                  
-var sources=[];
-for(var i=0;i<data.length;i++){
-   sources.push(data[i].id);
-}
 
-               alert(sources[0]);
                
 
                
