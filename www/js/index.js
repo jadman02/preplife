@@ -400,7 +400,7 @@ alert(result9[0].id);
 
                
                
-              $('#payment-form').show();
+              $('#existing-form').show();
      
                alert('got cards - need to put source in and add a button to change or add new card');}
            
@@ -434,6 +434,8 @@ function payModal(){
      '   <span class="preloader"></span>'+
     '  </div>'+
  
+        '<div id="existing-form"><i class="pf pf-visa" id="brand-icon"></i></div>'+
+        
         
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
  ' <div class="form-row" style="padding-left:5px;padding-top:20px;">'+
