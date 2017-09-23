@@ -391,11 +391,8 @@ if (data == '[]'){
 }
            else{
 
-               $('#payment-form').show();
-     alert(data);           
-alert(data[0].id);          
-               alert(data[0].card.last4); 
-              
+alert(data);  
+               alert(data[0].id);  
 
                //for (i = 0; i < data.length; i++) { 
   // alert(data[i].card.last);
@@ -435,7 +432,6 @@ function payModal(){
      '   <span class="preloader"></span>'+
     '  </div>'+
  
-        
         
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
  ' <div class="form-row" style="padding-left:5px;padding-top:20px;">'+
@@ -707,4 +703,3 @@ var pickerDevice = myApp.picker({
         }
     ]
 });
-
