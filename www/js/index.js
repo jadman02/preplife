@@ -391,6 +391,9 @@ if (data == '[]'){
 }
            else{
 
+               $('#payment-form').show();
+               loadElements();
+               $('input[type=tel]').val('4242424242424242');
 alert(data);               
 
                //for (i = 0; i < data.length; i++) { 
@@ -431,6 +434,7 @@ function payModal(){
      '   <span class="preloader"></span>'+
     '  </div>'+
  
+        
         
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
  ' <div class="form-row" style="padding-left:5px;padding-top:20px;">'+
