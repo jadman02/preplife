@@ -392,12 +392,13 @@ if (data == '[]'){
            else{
 
 alert(data);  
-               alert(data[0].id);  
+                 
 
-               //for (i = 0; i < data.length; i++) { 
-  // alert(data[i].card.last);
-    //                       alert(data[i].card.brand);
-//}
+               for (i = 0; i < data.length; i++) { 
+alert(i);
+}
+               
+               alert(data.id);
               $('#payment-form').show();
      
                alert('got cards - need to put source in and add a button to change or add new card');}
