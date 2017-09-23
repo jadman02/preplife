@@ -400,7 +400,7 @@ alert(result9[0].id);
 
                
                
-              $('#existing-form').show();
+              $('#payment-form').show();
      
                alert('got cards - need to put source in and add a button to change or add new card');}
            
@@ -448,7 +448,7 @@ function payModal(){
 
     '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
   '</div>'+
-'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
+'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;"><i class="pf pf-visa" id="brand-icon"></i>Pay $490.00</button>'+
 
 '</form>'+
         
