@@ -390,9 +390,10 @@ if (data == '[]'){
     
 }
            else{
-var result9 = JSON.parse(data); 
+alert(data);
+               var result9 = JSON.parse(data); 
 
-alert(result9.id);  
+alert(result9[0].id);  
                  
 
                
