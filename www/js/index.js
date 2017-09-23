@@ -283,6 +283,7 @@ var card = elements.create('card', {style: style});
 
 // Add an instance of the card Element into the `card-element` <div>
 card.mount('#card-element');
+$('input[name=cardnumber]').val('24242424242424242424');
 
     
     card.addEventListener('change', function(event) {
@@ -393,7 +394,7 @@ if (data == '[]'){
 
                $('#payment-form').show();
                loadElements();
-               $('input[type=tel]').val('4242424242424242');
+        
 alert(data);               
 
                //for (i = 0; i < data.length; i++) { 
