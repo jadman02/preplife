@@ -361,8 +361,9 @@ function stripeSourceHandler(source) {
  // form.submit();
 }
 
+var mycards;
 function getCards(){
-
+mycards = '';
     
     $('.newcarddiv').show();
        $.post( "http://www.recountify.com/getcards.php", {uid:f_auth_id} )
@@ -393,6 +394,8 @@ if (data == '[]'){
 alert(data);
                var result9 = JSON.parse(data); 
 
+               mycards = result9;
+               
 alert(result9[0].id);  
                  
 
@@ -554,7 +557,7 @@ $.each(obk, function(i, obj) {
 
 
 function mySources(){
-
+alert(JSON.stringify(mycards)); 
     var popupHTML = '<div class="popup sourcespop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
