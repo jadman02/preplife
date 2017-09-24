@@ -590,7 +590,7 @@ alert(JSON.stringify(mycards));
 
         
            '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
-    '<ul class="sourcesulul">'+
+    '<ul class="sourcesul">'+
 
     '</ul>'+
     '</div>'+
@@ -631,8 +631,8 @@ alert(JSON.stringify(mycards));
 
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title" style="color:#31325F">4242 10/20</div>'+
-         //  '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
+          '              <div class="item-title" style="color:#31325F">4242</div>'+
+           '             <div class="item-after">10/20</div>'+
             '        </div>'+
                ' </div>'+
            ' </label>'+
