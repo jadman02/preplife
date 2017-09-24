@@ -352,7 +352,7 @@ function stripeSourceHandler(source) {
 
     
     alert(JSON.stringify(source));
-        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
+        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:690,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function( data ) {  
             alert(data);
             });
@@ -424,8 +424,8 @@ alert(data);
 
 
 function payModal(idtoselect){
-alert(idtoselect);
-    alert('will tick the radioul');
+//alert(idtoselect);
+    //alert('will tick the radioul');
     var popupHTML = '<div class="popup buypop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
@@ -560,7 +560,7 @@ $.each(obk, function(i, obj) {
 
 function chargeSource(){
 
-    $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
+    $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:globalsource,amount:690,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function( data ) {  
             alert(data);
             });
