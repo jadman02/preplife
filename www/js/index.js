@@ -557,7 +557,7 @@ $.each(obk, function(i, obj) {
 
 
 function mySources(){
-alert(JSON.stringify(mycards)); 
+ 
     var popupHTML = '<div class="popup sourcespop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
