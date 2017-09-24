@@ -450,7 +450,7 @@ function payModal(idtoselect){
         
         '<div style="float:right;"><a href="#" class="button" style="margin-right:5px;" onclick="mySources()">Change</a></div>'+
         
-    '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
+    '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;"  onclick="chargeSource()">Pay $490.00</button>'+
 
     '</div>'+
         
@@ -466,7 +466,7 @@ function payModal(idtoselect){
 
     '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
   '</div>'+
-'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;" onclick="chargeSource()">Pay $490.00</button>'+
+'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
 '</form>'+
         
