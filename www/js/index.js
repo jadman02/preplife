@@ -632,7 +632,7 @@ function mySources(){
         '        <div class="item-inner" style="padding-left:0px;">'+
          '           <div class="item-title-row">'+
           '              <div class="item-title" style="font-size:18px;color:#31325F">**** **** **** 4242</div>'+
-           '             <div class="item-after" style="font-size:18px;">10/20</div>'+
+           '             <div class="item-after" style="font-size:18px;">10 / 20</div>'+
             '        </div>'+
                ' </div>'+
            ' </label>'+
