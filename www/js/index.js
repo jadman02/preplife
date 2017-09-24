@@ -438,9 +438,9 @@ function payModal(){
     '  </div>'+
  
         '<div id="existing-form" style="display:none;font-size:18px;line-height:22px;padding-top:20px;">'+
-    '<div class="selectedsource" style="float:left;padding-bottom:20px;"><i class="pe-7s-credit pe-lg" style="margin-right:5px;margin-left:5px;"></i> *4242  10/20</div>'+
+    '<div class="selectedsource" style="float:left;padding-bottom:20px;color:#31325F"><i class="pe-7s-credit pe-lg" style="margin-right:5px;margin-left:5px;"></i> 4242  10/20</div>'+
         
-        '<div style="float:right;"><a href="#" class="button">Change</a></div>'+
+        '<div style="float:right;"><a href="#" class="button" style="margin-right:5px;">Change</a></div>'+
         
     '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
