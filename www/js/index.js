@@ -401,8 +401,7 @@ alert(result9[0].id);
                
                
               $('#existing-form').show();
-              $('#payment-form').show();
-               loadElements();
+              
      
                
                
@@ -438,8 +437,11 @@ function payModal(){
      '   <span class="preloader"></span>'+
     '  </div>'+
  
-        '<div id="existing-form" style="display:none;font-size:18px;line-height:22px;">'+
-    
+        '<div id="existing-form" style="display:none;font-size:18px;line-height:22px;padding-left:5px;padding-top:20px;">'+
+    '<div class="selectedsource" style="float:left;">VISA 4242</div>'+
+        
+        '<div style="float:right;"><i class="pe-7s-credit pe-lg" style="margin-right:5px;"></i> | <i class="pe-7s-plus pe-lg"  style="margin-left:5px;"></i></div>'+
+        
     '<i class="pf pf-stripe"></i> 4242 CHANGE'+
     '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
