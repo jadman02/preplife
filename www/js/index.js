@@ -621,7 +621,7 @@ alert(JSON.stringify(mycards));
     
     for (i = 0; i < mycards.length; i++) { 
 
-        $('.sourcesul').append(' <li onclick="setSource()">'+
+        $('.sourcesul').append(' <li onclick="">'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="source-radio">'+
 
@@ -631,7 +631,7 @@ alert(JSON.stringify(mycards));
 
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title" style="color:#31325F">4242</div>'+
+          '              <div class="item-title" style="color:#31325F">**** **** **** 4242</div>'+
            '             <div class="item-after">10/20</div>'+
             '        </div>'+
                ' </div>'+
