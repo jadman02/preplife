@@ -171,7 +171,7 @@ $.each(objs, function(i, obk) {
 $.each(obk, function(i, obj) {
 
     $('.offersul').append(
-    ' <li onclick="payModal()">'+
+    ' <li onclick="payModal(\''+obj.id+'\')">'+
                 '       <a href="#" class="item-content">'+
      '           <div class="item-media">'+
       '              <img src="path/to/img.jpg">'+
@@ -352,7 +352,7 @@ function stripeSourceHandler(source) {
 
     
     alert(JSON.stringify(source));
-        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:100,currency:'AUD'} )
+        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function( data ) {  
             alert(data);
             });
@@ -362,9 +362,11 @@ function stripeSourceHandler(source) {
 }
 
 var mycards;
-function getCards(){
+var globalsource;
+var connectedaccount;
+function getCards(idconnectedaccount){
 mycards = '';
-    
+    connectedaccount = idconnectedaccount;
     $('.newcarddiv').show();
        $.post( "http://www.recountify.com/getcards.php", {uid:f_auth_id} )
   .done(function( data ) {    
@@ -396,10 +398,10 @@ alert(data);
 
                mycards = result9;
                
-alert(result9[0].id);  
+ 
                  
 
-               
+               globalsource = result9[0].id;
 
                
                
@@ -421,8 +423,9 @@ alert(result9[0].id);
 
 
 
-function payModal(){
-
+function payModal(idtoselect){
+alert(idtoselect);
+    alert('will tick the radioul');
     var popupHTML = '<div class="popup buypop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
@@ -463,7 +466,7 @@ function payModal(){
 
     '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
   '</div>'+
-'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
+'  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;" onclick="chargeSource()">Pay $490.00</button>'+
 
 '</form>'+
         
@@ -521,7 +524,7 @@ $.each(objs, function(i, obk) {
 $.each(obk, function(i, obj) {
 
     $('.radioul').append(
-   ' <li onclick="getCards()">'+
+   ' <li onclick="getCards(\''+obj.stripe_publishable_key+'\')">'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="my-radio">'+
 
@@ -554,6 +557,14 @@ $.each(obk, function(i, obj) {
     
 }
 
+
+function chargeSource(){
+
+    $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
+  .done(function( data ) {  
+            alert(data);
+            });
+}
 
 
 function mySources(){
