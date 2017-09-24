@@ -610,7 +610,7 @@ function mySources(){
     '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
   '</div>'+
 
-        '< a href="#" style="margin:0 auto;" class="button">Add Card</a>'+
+        '<a href="#" style="margin:0 auto;" class="button">Add Card</a>'+
         
 '</form>'+
         
