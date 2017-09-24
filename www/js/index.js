@@ -621,7 +621,7 @@ alert(JSON.stringify(mycards));
     
     for (i = 0; i < mycards.length; i++) { 
 
-         ' <li onclick="setSource()">'+
+        $('.sourcesul').append(' <li onclick="setSource()">'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="source-radio">'+
 
@@ -638,7 +638,7 @@ alert(JSON.stringify(mycards));
            ' </label>'+
         '</li>'
         
-        //  $('.sourcesul').append('<li><div style="font-size:18px;line-height:22px;padding-top:20px;">'+
+        //  '<li><div style="font-size:18px;line-height:22px;padding-top:20px;">'+
     //'<div class="selectedsource" style="float:left;padding-bottom:20px;"> 4242  10/20</div>'+
 
 
