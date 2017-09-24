@@ -598,7 +598,7 @@ function mySources(){
 
                    ' <div class="content-block-title">Add New Card</div>'+
         
-         ' <form action="/charge" method="post" id="payment-form">'+
+         ' <form action="/charge" method="post" id="payment-form" style="padding-left:15px;padding-right:15px;">'+
  ' <div class="form-row" style="padding-left:5px;padding-top:20px;">'+
    ' <label for="card-element">'+
    ' </label>'+
