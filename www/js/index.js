@@ -402,7 +402,7 @@ alert(result9[0].id);
                
               $('#existing-form').show();
               $('#payment-form').show();
-               loadElement();
+               loadElements();
      
                
                
