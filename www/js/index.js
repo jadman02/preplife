@@ -401,7 +401,9 @@ alert(result9[0].id);
                
                
               $('#existing-form').show();
-              
+
+                             $('#payment-form').remove();
+
      
                
                
@@ -553,11 +555,11 @@ $.each(obk, function(i, obj) {
 
 function mySources(){
 
-    var popupHTML = '<div class="popup buypop" style="height:100%;overflow: hidden;">'+
+    var popupHTML = '<div class="popup sourcespop" style="height:100%;overflow: hidden;">'+
                     
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
-   '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
+   '    <div class="left"></div>'+
   '  <div class="center" style="color:white;">My Payment Sources</div>'+
   '  <div class="right"></div>'+
         
@@ -572,7 +574,7 @@ function mySources(){
        
         
       
-        '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Done</button>'+
+        '  <button class="button external active button-big" onclick="closeSources();" style="margin:0 auto;width:100%;border-radius:0px;">Done</button>'+
 
         '</div>'+
         
@@ -610,10 +612,16 @@ function mySources(){
         '</div></div></div>'+
                   '</div>';
   myApp.popup(popupHTML);
+    loadElements();
    myApp.sizeNavbars();
 
 } 
 
+function closeSources(){
+
+    myApp.closeModal('.sourcespop');
+    
+}
 
 function chargeCard(){
 
