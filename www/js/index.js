@@ -642,7 +642,7 @@ alert(JSON.stringify(mycards));
     //'<div class="selectedsource" style="float:left;padding-bottom:20px;"> 4242  10/20</div>'+
 
 
-    ');
+    );
         
 }
     
