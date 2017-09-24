@@ -629,10 +629,10 @@ function mySources(){
       '<i class="pe-7s-credit pe-lg" style="margin-right:5px;margin-left:5px;"></i>'+
        '         </div>'+
 
-        '        <div class="item-inner">'+
+        '        <div class="item-inner" style="padding-left:0px;">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title" style="color:#31325F">**** **** **** 4242</div>'+
-           '             <div class="item-after">10/20</div>'+
+          '              <div class="item-title" style="font-size:18px;color:#31325F">**** **** **** 4242</div>'+
+           '             <div class="item-after" style="font-size:18px;">10/20</div>'+
             '        </div>'+
                ' </div>'+
            ' </label>'+
