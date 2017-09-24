@@ -440,7 +440,7 @@ function payModal(){
         '<div id="existing-form" style="display:none;font-size:18px;line-height:22px;padding-top:20px;">'+
     '<div class="selectedsource" style="float:left;padding-bottom:20px;color:#31325F"><i class="pe-7s-credit pe-lg" style="margin-right:5px;margin-left:5px;"></i> 4242  10/20</div>'+
         
-        '<div style="float:right;"><a href="#" class="button" style="margin-right:5px;">Change</a></div>'+
+        '<div style="float:right;"><a href="#" class="button" style="margin-right:5px;" onclick="mySources()">Change</a></div>'+
         
     '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Pay $490.00</button>'+
 
@@ -551,7 +551,68 @@ $.each(obk, function(i, obj) {
 
 
 
+function mySources(){
 
+    var popupHTML = '<div class="popup buypop" style="height:100%;overflow: hidden;">'+
+                    
+     '   <div class="navbar" style="background-color:#00bcd4;">'+
+    '<div class="navbar-inner">'+
+   '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
+  '  <div class="center" style="color:white;">My Payment Sources</div>'+
+  '  <div class="right"></div>'+
+        
+ '   </div>'+
+'</div>'+
+'<div class="pages" style="height:100%;overflow: hidden;">'+
+'<div data-page="buypage" class="page" style="height:100%;overflow: hidden;">'+
+
+      '<div class="" style="position:absolute;width:100%;z-index:5000000;background-color:#f7f7f8;bottom:60px;">'+
+
+ 
+       
+        
+      
+        '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;">Done</button>'+
+
+        '</div>'+
+        
+        '<div class="page-content" style="height:calc(100% - 44px);overflow:scroll;background-color:white;padding-bottom:132px;">'+
+   
+
+    
+        
+                   ' <div class="content-block-title">Select card</div>'+
+
+        
+           '<div class="list-block media-list" style="margin-bottom:0px;margin-top:0px;">'+
+    '<ul class="sourcesul">'+
+
+    '</ul>'+
+    '</div>'+
+
+                   ' <div class="content-block-title">Add New Card</div>'+
+        
+         ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
+ ' <div class="form-row" style="padding-left:5px;padding-top:20px;">'+
+   ' <label for="card-element">'+
+   ' </label>'+
+   ' <div id="card-element">'+
+
+   ' </div>'+
+
+
+    '<div id="card-errors" role="alert" style="height:20px;display:block;color:white;"></div>'+
+  '</div>'+
+
+'</form>'+
+        
+
+        '</div></div></div>'+
+                  '</div>';
+  myApp.popup(popupHTML);
+   myApp.sizeNavbars();
+
+} 
 
 
 function chargeCard(){
