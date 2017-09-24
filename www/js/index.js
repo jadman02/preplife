@@ -561,7 +561,7 @@ $.each(obk, function(i, obj) {
 function chargeSource(){
 alert(globalsource);
     alert(connectedaccount);
-    $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:globalsource,amount:690,currency:'AUD',connectedaccount:connectedaccount} )
+    $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:'globalsource',amount:100,currency:'AUD',connectedaccount:'connectedaccount'} )
   .done(function( data ) {  
             alert(data);
             });
