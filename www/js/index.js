@@ -352,7 +352,7 @@ function stripeSourceHandler(source) {
 
     
     alert(JSON.stringify(source));
-        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:690,currency:'AUD',connectedaccount:connectedaccount} )
+        $.post( "http://www.recountify.com/newcard.php", {uid:f_auth_id,newtoken:source.id,amount:690,currency:'aud',connectedaccount:connectedaccount} )
   .done(function( data ) {  
             alert(data);
             });
