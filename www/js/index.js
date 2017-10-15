@@ -565,8 +565,9 @@ $.each(obk, function(i, obj) {
 
 
 function chargeSource(){
-$('.centre-title').html('Processing Payment');
-    
+$('.center-title').html('Processing Payment');
+    $('#existing-form').hide();
+
     
     $.post( "http://www.recountify.com/newcard.php", {paymenttype:'multiple',uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function(data2) {  
@@ -577,7 +578,8 @@ $('.centre-title').html('Processing Payment');
             //payment success
                 
              alert('payment sucess');   
-                
+                    myApp.closeModal('.buypop');
+
             }
         
             });
