@@ -71,6 +71,7 @@ view2 = myApp.addView('#view-2', {
     dynamicNavbar: true
 });
 view3 = myApp.addView('#view-3');
+view4 = myApp.addView('#view-4');
 
        
 //myApp.init(); 
@@ -355,6 +356,9 @@ function stripeSourceHandler(source) {
         $.post( "http://www.recountify.com/newcard.php", {paymenttype:'first',uid:f_auth_id,newtoken:source.id,amount:690,currency:'aud',connectedaccount:connectedaccount} )
   .done(function( data ) {  
             alert(data);
+           
+            
+            
             });
     
   // Submit the form
@@ -431,7 +435,7 @@ function payModal(idtoselect){
      '   <div class="navbar" style="background-color:#00bcd4;">'+
     '<div class="navbar-inner">'+
    '    <div class="left"><a href="#" class="close-popup link" style="color:white;margin-left:-10px;"><i class="pe-7s-angle-left pe-3x"></i></a></div>'+
-  '  <div class="center" style="color:white;">Select Offer</div>'+
+  '  <div class="center center-title" style="color:white;">Select Offer</div>'+
   '  <div class="right"></div>'+
         
  '   </div>'+
@@ -453,6 +457,8 @@ function payModal(idtoselect){
     '  <button class="button external active button-big" style="margin:0 auto;width:100%;border-radius:0px;"  onclick="chargeSource()">Pay $490.00</button>'+
 
     '</div>'+
+        
+
         
         
        ' <form action="/charge" method="post" id="payment-form" style="display:none;">'+
@@ -559,12 +565,21 @@ $.each(obk, function(i, obj) {
 
 
 function chargeSource(){
-
-    alert('got here');
+$('.centre-title').html('Processing Payment');
+    
     
     $.post( "http://www.recountify.com/newcard.php", {paymenttype:'multiple',uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function(data2) {  
-            alert(data2);
+
+        
+        
+         if (data2 == '999'){
+            //payment success
+                
+             alert('payment sucess');   
+                
+            }
+        
             });
 }
 
