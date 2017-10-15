@@ -458,6 +458,7 @@ function payModal(idtoselect){
 
     '</div>'+
         
+             '<span class="preloader preloader-white results-loader" style="display:none;margin-top:20px;clear:both;margin:0 auto;"></span>'+
 
         
         
@@ -530,7 +531,7 @@ $.each(objs, function(i, obk) {
 $.each(obk, function(i, obj) {
 
     $('.radioul').append(
-   ' <li onclick="getCards(\''+obj.stripe_user_id+'\')">'+
+   ' <li class="li_'+obj.stripe_user_id+'" onclick="getCards(\''+obj.stripe_user_id+'\')">'+
 '              <label class="label-radio item-content">'+
         '                <input type="radio" name="my-radio">'+
 
@@ -567,6 +568,8 @@ $.each(obk, function(i, obj) {
 function chargeSource(){
 $('.center-title').html('Processing Payment');
     $('#existing-form').hide();
+        $('.results-loader').show();
+
 
     
     $.post( "http://www.recountify.com/newcard.php", {paymenttype:'multiple',uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
