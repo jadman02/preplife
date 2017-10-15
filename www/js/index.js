@@ -560,6 +560,8 @@ $.each(obk, function(i, obj) {
 
 function chargeSource(){
 
+    alert('got here');
+    
     $.post( "http://www.recountify.com/newcard.php", {paymenttype:'multiple',uid:f_auth_id,newtoken:globalsource,amount:100,currency:'AUD',connectedaccount:connectedaccount} )
   .done(function(data2) {  
             alert(data2);
