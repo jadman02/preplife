@@ -579,7 +579,7 @@ function customerPays(){
                     var result5 = JSON.parse(data9); 
 
 
-     for (i = 0; i < cars.length; i++) { 
+     for (i = 0; i < result5.length; i++) { 
 
        $('.paidul').append(
     ' <li onclick="">'+
@@ -600,7 +600,7 @@ function customerPays(){
     );  
          
 }
-
+});
 
 }
 
