@@ -565,6 +565,18 @@ $.each(obk, function(i, obj) {
 }
 
 
+function customerPays(){
+ $.post( "http://www.recountify.com/receipts.php", {} )
+  .done(function( data9 ) {  
+            alert(data9);
+           
+            
+            
+            });
+
+
+}
+
 function chargeSource(){
 $('.center-title').html('Processing Payment');
     $('#existing-form').hide();
