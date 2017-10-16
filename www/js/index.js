@@ -579,8 +579,10 @@ function customerPays(){
                     var result5 = JSON.parse(data9); 
 
 
-     for (i = 0; i < result5.length; i++) { 
+     for (i = 0; i < result5.data.length; i++) { 
 
+         alert(result5.data[i].balance_transaction);
+         
        $('.paidul').append(
     ' <li onclick="">'+
                 '       <a href="#" class="item-content">'+
@@ -589,10 +591,10 @@ function customerPays(){
        '         </div>'+
         '        <div class="item-inner">'+
          '           <div class="item-title-row">'+
-          '              <div class="item-title">'+result5[i].data[i].balance_transaction+' </div>'+
+          '              <div class="item-title">'+result5.data[i].balance_transaction+' </div>'+
            '             <div class="item-after">0 <i class="pe-7s-portfolio"></i></div>'+
             '        </div>'+
-             '       <div class="item-subtitle">'+result5[i].data[i].amount+'</div>'+
+             '       <div class="item-subtitle">'+result5.data[i].amount+'</div>'+
               '      <div class="item-text"></div>'+
                ' </div>'+
            ' </a>'+
